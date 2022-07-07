@@ -85,12 +85,12 @@
                 <h2 class="solution__title">Форма для заявок</h2>
                 <form  enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
                     <div class="feed-form__row">
-                        <input type="text" placeholder="Имя" name="name" id="" class="input-text">
-                        <input type="tel"  placeholder="Телефон" name="phone"  id="" class="input-text">
+                        <input type="text" required placeholder="Имя" name="name" id="" class="input-text">
+                        <input type="tel"  required placeholder="Телефон" name="phone"  id="" class="input-text">
                     </div>
                     <div class="feed-form__row">
                         <input type="email" placeholder="E-mail" name="email" id="" class="input-text">
-                        <input type="text" placeholder="Комментарий" name="text" id="" class="input-text">
+                        <input type="text" required placeholder="Комментарий" name="text" id="" class="input-text">
                     </div>
                     <div class="feed-form__row">
                         <div class="input__wrapper">
@@ -101,6 +101,15 @@
                          </div>
                         <button class="feed-form__button">Заказать</button>
                     </div>
+                    <div class="feed-form__row">
+                    <div class="checkbox">
+						<input id="usercheck" checked required type="checkbox" name="usercheck" class="checkbox__input">
+						<label for="usercheck" class="checkbox__label"><span>Я даю своё согласие на обработку
+								персональных данных в соответствии с <a href="#" class="checkbox__link"
+									target="blank">Условиями</a>*</span>
+						</label>
+					</div>
+                </div>
                 </form>
             </div>
         </section>

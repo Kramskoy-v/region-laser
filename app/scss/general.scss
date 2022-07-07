@@ -789,7 +789,7 @@ address {
         display: flex;
         justify-content: space-between;
 
-        &:last-child {
+        &:nth-child(3) {
             margin-top: 80px;
         }
     }
@@ -891,65 +891,32 @@ address {
     color: $colorOne;
 }
 
+.checkbox {
+    display: flex;
+    margin-top: 45px;
+    color: $colorFour;
+    font-size: 12px;
+
+    &__label {
+        margin-left: 10px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    &__link {
+        color: $colorFour;
+
+        &:hover {
+            color: $colorOne;
+        }
+    }
+}
+
+#usercheck {
+    height: 13px;
+}
+
+
 .contacts.form-page {
     padding-top: 90px;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, .52);
-    z-index: 3
-}
-
-.modal--active {
-    display: block
-}
-
-.modal__window {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    padding: 10px 25px;
-    max-width: 380px;
-    background-image: -o-radial-gradient(#e2e2e2 60%, #909090);
-    background-image: radial-gradient(#e2e2e2 60%, #909090);
-    border-radius: 5px
-}
-
-.modal__close {
-    position: absolute;
-    top: 0;
-    right: -50px;
-    font-size: 48px;
-    line-height: 24px;
-    color: #fff;
-    cursor: pointer;
-    -webkit-transition: .4s;
-    -o-transition: .4s;
-    transition: .4s
-}
-
-.modal__close:hover {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg)
-}
-
-.modal__title {
-    font-size: 26px;
-    text-align: center
-}
-
-.modal__desc {
-    margin-top: 20px;
-    font-size: 18px;
-    text-align: center
 }
