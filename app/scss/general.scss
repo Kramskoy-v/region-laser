@@ -223,13 +223,13 @@ $headerFooter: #24282c;
     font-weight: 500;
     line-height: 2.6;
     background-color: $colorOne;
+    border: 2px solid $colorOne ;
+    color: #333438;
     text-align: center;
     cursor: pointer;
-    transition: .3s;
-
+    transition: .2s;
 
     &:hover {
-        outline: 2px solid $colorOne;
         background-color: #333438;
         color: $colorOne;
     }
@@ -717,9 +717,180 @@ address {
     .container {
         padding: 60px 0 70px;
     }
+
     &__title {
         font-size: 21px;
         text-transform: uppercase;
         text-align: center;
     }
+}
+
+.form-page {
+    .container {
+        background-image: url('../img/form_page_bg.jpg');
+    }
+}
+
+.info-form {
+    background-color: $colorFour;
+
+    .container {
+        padding: 65px 0 100px;
+    }
+
+    &__wrap {
+        padding-top: 90px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        max-width: 270px;
+    }
+
+    &__number {
+        font-size: 74px;
+        font-weight: 500;
+        line-height: 1;
+        color: $colorThree;
+    }
+
+    &__title {
+        padding-top: 8px;
+        vertical-align: top;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.4;
+        text-align: center;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    &__desc {
+        text-align: center;
+        color: $colorTwo;
+    }
+}
+
+.feed-form {
+    background-color: $colorTwo;
+
+    .container {
+        padding: 80px 0 120px;
+
+        form {
+            max-width: 925px;
+            margin: 0 auto;
+            padding-top: 40px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        &:last-child {
+            margin-top: 80px;
+        }
+    }
+
+    &__button {
+        width: 47%;
+        height: 50px;
+        color: $colorThree;
+        background-color: #59573d;
+        border: 2px solid $colorOne;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+            background-color: #333438;
+            color: $colorOne;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+
+    .solution {
+        &__title {
+            color: $colorThree;
+        }
+    }
+}
+
+.input-text {
+    width: 48%;
+    height: 70px;
+    margin-top: 25px;
+    padding: 10px 0;
+    background-color: $colorTwo;
+    color: $colorFive;
+    border: none;
+    border-bottom: 1px solid $colorFive;
+}
+
+.input-text:focus-visible {
+    outline: none;
+    border-bottom: 1px solid $colorOne;
+    color: $colorThree;
+}
+
+/*Стилизация input - file*/
+.input__wrapper {
+    width: 47%;
+    position: relative;
+    margin: 0;
+    text-align: center;
+}
+
+.input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.input__file-button-text {
+    width: 100%;
+    line-height: 1;
+}
+
+.input__file-button {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #b7b7b7;
+    border: 2px solid #b7b7b7;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    text-align: center;
+    transition: .2s;
+
+    &:hover {
+        border-color: $colorOne;
+        background-color: #333438;
+        color: $colorOne;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.file-active {
+    border-color: $colorOne;
+    background-color: #333438;
+    color: $colorOne;
+}
+
+.contacts.form-page {
+    padding-top: 90px;
 }

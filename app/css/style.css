@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"); /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -539,14 +540,15 @@ li {
   font-weight: 500;
   line-height: 2.6;
   background-color: #ffc700;
+  border: 2px solid #ffc700;
+  color: #333438;
   text-align: center;
   cursor: pointer;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .button:hover {
-  outline: 2px solid #ffc700;
   background-color: #333438;
   color: #ffc700;
 }
@@ -1016,4 +1018,174 @@ address {
   font-size: 21px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.form-page .container {
+  background-image: url("../img/form_page_bg.jpg");
+}
+
+.info-form {
+  background-color: #c3c3c3;
+}
+.info-form .container {
+  padding: 65px 0 100px;
+}
+.info-form__wrap {
+  padding-top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.info-form__item {
+  max-width: 270px;
+}
+.info-form__number {
+  font-size: 74px;
+  font-weight: 500;
+  line-height: 1;
+  color: #ffffff;
+}
+.info-form__title {
+  padding-top: 8px;
+  vertical-align: top;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.info-form__desc {
+  text-align: center;
+  color: #3d4148;
+}
+
+.feed-form {
+  background-color: #3d4148;
+}
+.feed-form .container {
+  padding: 80px 0 120px;
+}
+.feed-form .container form {
+  max-width: 925px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.feed-form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.feed-form__row:last-child {
+  margin-top: 80px;
+}
+.feed-form__button {
+  width: 47%;
+  height: 50px;
+  color: #ffffff;
+  background-color: #59573d;
+  border: 2px solid #ffc700;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.feed-form__button:hover {
+  background-color: #333438;
+  color: #ffc700;
+}
+.feed-form__button:active {
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.feed-form .solution__title {
+  color: #ffffff;
+}
+
+.input-text {
+  width: 48%;
+  height: 70px;
+  margin-top: 25px;
+  padding: 10px 0;
+  background-color: #3d4148;
+  color: #909090;
+  border: none;
+  border-bottom: 1px solid #909090;
+}
+
+.input-text:focus-visible {
+  outline: none;
+  border-bottom: 1px solid #ffc700;
+  color: #ffffff;
+}
+
+/*Стилизация input - file*/
+.input__wrapper {
+  width: 47%;
+  position: relative;
+  margin: 0;
+  text-align: center;
+}
+
+.input__file {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.input__file-button-text {
+  width: 100%;
+  line-height: 1;
+}
+
+.input__file-button {
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #b7b7b7;
+  border: 2px solid #b7b7b7;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.input__file-button:hover {
+  border-color: #ffc700;
+  background-color: #333438;
+  color: #ffc700;
+}
+.input__file-button:active {
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.file-active {
+  border-color: #ffc700;
+  background-color: #333438;
+  color: #ffc700;
+}
+
+.contacts.form-page {
+  padding-top: 90px;
 }
