@@ -83,23 +83,23 @@
         <section class="feed-form">
             <div class="container">
                 <h2 class="solution__title">Форма для заявок</h2>
-                <form action="#">
+                <form  enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
                     <div class="feed-form__row">
-                        <input type="text" placeholder="Имя" name="" id="" class="input-text">
-                        <input type="tel"  placeholder="Телефон" name=""  id="" class="input-text">
+                        <input type="text" placeholder="Имя" name="name" id="" class="input-text">
+                        <input type="tel"  placeholder="Телефон" name="phone"  id="" class="input-text">
                     </div>
                     <div class="feed-form__row">
-                        <input type="email" placeholder="E-mail" name="" id="" class="input-text">
-                        <input type="text" placeholder="Комментарий" name="" id="" class="input-text">
+                        <input type="email" placeholder="E-mail" name="email" id="" class="input-text">
+                        <input type="text" placeholder="Комментарий" name="text" id="" class="input-text">
                     </div>
                     <div class="feed-form__row">
                         <div class="input__wrapper">
-                            <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>
+                            <input name="myfile[]" type="file" id="input__file" class="input input__file" multiple>
                             <label for="input__file" class="input__file-button">
                                <span class="input__file-button-text">Прикрепить файл</span>
                             </label>
                          </div>
-                        <button type="submit" class="feed-form__button">Заказать</button>
+                        <button class="feed-form__button">Заказать</button>
                     </div>
                 </form>
             </div>
