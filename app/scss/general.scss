@@ -137,16 +137,24 @@ $headerFooter: #24282c;
 
     &__item {
         margin-left: 150px;
-        padding-bottom: 5px;
+        padding: 5px 10px 10px;
+        position: relative;
+        transition: .2s;
 
         &:first-child {
             margin-left: 0;
         }
 
-        &:hover {
-            border-bottom: 2px solid $colorOne;
-            margin-bottom: -2px;
+        &:hover .menu {
+            &__link {
+                color: $colorFour;
+            }
+        }
 
+        &:hover .sub-menu {
+            &__list {
+                visibility: visible;
+            }
         }
     }
 
@@ -155,6 +163,42 @@ $headerFooter: #24282c;
         font-size: 18px;
     }
 }
+
+.sub-menu {
+    &__list {
+        position: absolute;
+        min-width: 200px;
+        background-color: $headerFooter;
+        border-top: 1px solid $colorOne;
+        left: 0;
+        top: 100%;
+        transition: .3s;
+        visibility: hidden;
+    }
+
+    &__item {
+        border-bottom: 1px solid $headerFooter;
+
+        &:hover {
+            border-color: $colorOne;
+
+            .sub-menu {
+                &__link {
+                    color: $colorOne;
+                }
+            }
+        }
+    }
+
+    &__link {
+        padding: 15px 25px;
+        color: $colorFour;
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+
 
 .video {
     .container {
@@ -919,4 +963,52 @@ address {
 
 .contacts.form-page {
     padding-top: 90px;
+}
+
+.contacts-page {
+    .container {
+        background-image: url('../img/contacts_page_bg.jpg');
+    }
+}
+
+.contacts-block {
+    background-color: $colorFour;
+
+    .container {
+        padding: 70px 0 100px;
+    }
+
+    &__title {
+        font-size: 21px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .contacts {
+        margin-top: 40px;
+        line-height: 1.2;
+
+        &__info {
+            text-align: center;
+            color: #000000;
+        }
+
+        &__vk {
+            width: 60px;
+            height: 60px;
+            transition: .2s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.map {
+
+    .container {
+        max-width: 1920px;
+    }
 }

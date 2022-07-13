@@ -24,16 +24,68 @@
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a href="" class="menu__link">Услуги</a>
+                            <a href="#" class="menu__link">Услуги</a>
+                            <ul class="sub-menu__list">
+                                <li class="sub-menu__item">
+                                    <a href="laser-page.html" class="sub-menu__link">Лазерная резка</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="" class="sub-menu__link">Плазменная резка</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="" class="sub-menu__link">Гибка металла</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="" class="sub-menu__link">Сварка металла</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="" class="sub-menu__link">Порошковая покраска</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="" class="sub-menu__link">Изг. металлоконструкции</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="" class="sub-menu__link">Разработка документации</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="menu__item">
                             <a href="" class="menu__link">Продукция</a>
+                            <ul class="sub-menu__list">
+                                <li class="sub-menu__item">
+                                    <a href="" class="sub-menu__link">Изготовление кронштейнов</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="" class="sub-menu__link">Металлические фланцы</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="" class="sub-menu__link">Металлические емкости</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="" class="sub-menu__link">Худ. изделия</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="" class="sub-menu__link">По образцу</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="menu__item">
                             <a href="" class="menu__link">О нас</a>
+                            <ul class="sub-menu__list">
+                                <li class="sub-menu__item">
+                                    <a href="" class="sub-menu__link">Взаимодействие</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="" class="sub-menu__link">Доставка</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="form-page.html" class="sub-menu__link">Заявка</a>
+                                </li>
+
+                            </ul>
                         </li>
                         <li class="menu__item">
-                            <a href="" class="menu__link">Контакты</a>
+                            <a href="contacts-page.html" class="menu__link">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -83,10 +135,10 @@
         <section class="feed-form">
             <div class="container">
                 <h2 class="solution__title">Форма для заявок</h2>
-                <form  enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+                <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
                     <div class="feed-form__row">
                         <input type="text" required placeholder="Имя" name="name" id="" class="input-text">
-                        <input type="tel"  required placeholder="Телефон" name="phone"  id="" class="input-text">
+                        <input type="tel" required placeholder="Телефон" name="phone" id="" class="input-text">
                     </div>
                     <div class="feed-form__row">
                         <input type="email" placeholder="E-mail" name="email" id="" class="input-text">
@@ -96,47 +148,49 @@
                         <div class="input__wrapper">
                             <input name="myfile[]" type="file" id="input__file" class="input input__file" multiple>
                             <label for="input__file" class="input__file-button">
-                               <span class="input__file-button-text">Прикрепить файл</span>
+                                <span class="input__file-button-text">Прикрепить файл</span>
                             </label>
-                         </div>
+                        </div>
                         <button class="feed-form__button">Заказать</button>
                     </div>
                     <div class="feed-form__row">
-                    <div class="checkbox">
-						<input id="usercheck" checked required type="checkbox" name="usercheck" class="checkbox__input">
-						<label for="usercheck" class="checkbox__label"><span>Я даю своё согласие на обработку
-								персональных данных в соответствии с <a href="#" class="checkbox__link"
-									target="blank">Условиями</a>*</span>
-						</label>
-					</div>
-                </div>
+                        <div class="checkbox">
+                            <input id="usercheck" checked required type="checkbox" name="usercheck"
+                                class="checkbox__input">
+                            <label for="usercheck" class="checkbox__label"><span>Я даю своё согласие на обработку
+                                    персональных данных в соответствии с <a href="#" class="checkbox__link"
+                                        target="blank">Условиями</a>*</span>
+                            </label>
+                        </div>
+                    </div>
                 </form>
             </div>
         </section>
-        <footer class="footer">
-            <div class="container">
-                <div class="requisites">
-                    <h4 class="requisites__name">ООО «Регион Лазер»</h4>
-                    <h5 class="requisites__legal">Юридический адрес :</h5>
-                    <p class="requisites__desc">394016, Воронежская обл, Воронеж г,<br>
-                        Беговая ул, дом 14, квартира 26</p>
-                    <p class="requisites__desc">ОГРН: 1193668025803</p>
-                    <p class="requisites__desc">ИНН: 3664242482</p>
-                </div>
-                <div class="contacts form-page">
-
-                    <address>
-                        <p class="contacts__info">г. Москва, просп. Андропова, 22,<br>
-                            БЦ Нагатинский</p>
-                        <a href="tel:+74994903000" class="contacts__info">+7(499) 490 30 00</a>
-                        <a href="https://wa.me/+9003001661" class="contacts__info">WhatsApp: 8 900 300 16 61</a>
-                        <a href="mailto:2120001@RL36.ru" class="contacts__info">2120001@RL36.ru</a>
-                    </address>
-                </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="requisites">
+                <h4 class="requisites__name">ООО «Регион Лазер»</h4>
+                <h5 class="requisites__legal">Юридический адрес :</h5>
+                <p class="requisites__desc">394016, Воронежская обл, Воронеж г,<br>
+                    Беговая ул, дом 14, квартира 26</p>
+                <p class="requisites__desc">ОГРН: 1193668025803</p>
+                <p class="requisites__desc">ИНН: 3664242482</p>
             </div>
-            <div class="back_to_top"></div>
-        </footer>
-        <script src="../js/main.js"></script>
+            <div class="contacts form-page">
+
+                <address>
+                    <p class="contacts__info">г. Москва, просп. Андропова, 22,<br>
+                        БЦ Нагатинский</p>
+                    <a href="tel:+74994903000" class="contacts__info">+7(499) 490 30 00</a>
+                    <a href="https://wa.me/+9003001661" class="contacts__info">WhatsApp: 8 900 300 16 61</a>
+                    <a href="mailto:2120001@RL36.ru" class="contacts__info">2120001@RL36.ru</a>
+                </address>
+            </div>
+        </div>
+        <div class="back_to_top"></div>
+    </footer>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

@@ -40,6 +40,7 @@ try {
 
     // Получатель письма
    $mail->addAddress('kramskoy.va@gmail.com');
+   $mail->addAddress('PavelKU@bk.ru');
 
  // Прикрипление файлов к письму
  if (!empty($file['name'][0])) {
