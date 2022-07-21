@@ -407,8 +407,11 @@ li {
 }
 
 .header {
-  height: 130px;
   background-color: #24282c;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .header .container {
   display: -webkit-box;
@@ -417,8 +420,13 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
 .header__contact {
+  padding: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -431,7 +439,7 @@ li {
           align-items: center;
   border-bottom: 2px solid #333438;
 }
-.header__city, .header__link {
+.header__link {
   color: #909090;
   font-size: 16px;
 }
@@ -439,10 +447,43 @@ li {
   color: #ffc700;
 }
 
+.location__city {
+  color: #909090;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+}
+.location__city:hover .sub-location {
+  visibility: visible;
+}
+.location__city span:hover {
+  color: #ffc700;
+}
+
+.sub-location {
+  visibility: hidden;
+  min-width: 150px;
+  padding-bottom: 15px;
+  position: absolute;
+  left: -18px;
+  background-color: #24282c;
+  z-index: 1;
+}
+.sub-location__city {
+  padding: 15px 20px 0;
+}
+.sub-location__link {
+  color: #909090;
+  font-size: 16px;
+}
+.sub-location__link:hover {
+  color: #ffc700;
+}
+
 .logo {
   width: 180px;
   display: block;
-  margin-top: 10px;
+  margin: 5px 0;
 }
 .logo__img {
   width: 100%;
@@ -464,8 +505,7 @@ li {
 }
 .menu__item {
   margin-left: 150px;
-  padding: 5px 10px 10px;
-  position: relative;
+  padding: 15px 10px;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -486,18 +526,30 @@ li {
 
 .sub-menu__list {
   position: absolute;
-  min-width: 200px;
+  width: 100%;
   background-color: #24282c;
   border-top: 1px solid #ffc700;
   left: 0;
-  top: 100%;
+  top: 120px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   visibility: hidden;
+  z-index: 2;
+}
+.sub-menu__list::before {
+  content: "";
+  display: block;
+  width: 300vh;
+  height: 100%;
+  background-color: #24282c;
+  position: absolute;
+  left: -100vh;
+  z-index: -1;
 }
 .sub-menu__item {
   border-bottom: 1px solid #24282c;
+  width: 32%;
 }
 .sub-menu__item:hover {
   border-color: #ffc700;
@@ -514,8 +566,8 @@ li {
 
 .video .container {
   max-width: 1920px;
-  height: 810px;
-  padding-bottom: 50px;
+  height: calc(100vh - 115px);
+  padding-top: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -526,9 +578,9 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   background-image: url("../img/video_bg.jpg");
   background-repeat: no-repeat;
@@ -536,9 +588,9 @@ li {
   background-position: center;
 }
 .video__triangle {
-  margin-top: 200px;
+  margin-top: 13%;
   border: 18px solid transparent;
-  border-top: 20px solid #ffffff;
+  border-top: 20px solid #ffc700;
   display: block;
   width: 0;
   height: 0;
@@ -596,7 +648,7 @@ li {
   background-color: #3d4148;
 }
 .features .container {
-  padding: 110px 0 130px;
+  padding: 55px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -641,7 +693,7 @@ li {
   background-attachment: fixed;
 }
 .solution .container {
-  padding: 100px 0 40px;
+  padding: 55px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -705,7 +757,7 @@ li {
   color: #000000;
 }
 .card__item:hover {
-  outline: 1px solid #ffffff;
+  outline: 1px solid #ffc700;
 }
 .card__item:active {
   -webkit-transform: scale(0.99);
@@ -722,7 +774,7 @@ li {
 }
 .card__info {
   width: 50%;
-  padding: 25px 0 0 15px;
+  padding: 0 0 0 15px;
   -moz-text-align-last: left;
        text-align-last: left;
 }
@@ -812,7 +864,7 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 105px 0 130px;
+  padding: 100px 0;
 }
 .painting__image {
   width: 50%;
@@ -901,7 +953,6 @@ address {
   width: 55px;
   height: 55px;
   border: 3px solid #ffc700;
-  border-radius: 100%;
   background-image: url("../img/arrow_to_top.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1285,8 +1336,14 @@ address {
           transform: scale(1.05);
 }
 
+a.contacts__info.vk {
+  width: 60px;
+  margin: 0 auto;
+}
+
 .map .container {
   max-width: 1920px;
+  height: 50vh;
 }
 
 @media (max-width: 1200px) {

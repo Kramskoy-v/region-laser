@@ -85,16 +85,19 @@ $headerFooter: #24282c;
 }
 
 .header {
-    height: 130px;
     background-color: $headerFooter;
-
+    position: sticky;
+    top: 0;
+    z-index: 10;
     .container {
         display: flex;
         justify-content: space-between;
-
-    }
+        align-items: center;
+        position: relative;
+     }
 
     &__contact {
+        padding: 15px 0;
         display: flex;
         justify-content: space-between;
         height: 50%;
@@ -102,7 +105,6 @@ $headerFooter: #24282c;
         border-bottom: 2px solid #333438;
     }
 
-    &__city,
     &__link {
         color: $colorFive;
         font-size: 16px;
@@ -115,10 +117,56 @@ $headerFooter: #24282c;
     }
 }
 
+.location {
+
+    &__city {
+        color: $colorFive;
+        font-size: 16px;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            .sub-location {
+                visibility: visible;
+            }
+        }
+
+        span {
+            &:hover {
+                color: $colorOne;
+            }
+        }
+    }
+}
+
+.sub-location {
+    visibility: hidden;
+    min-width: 150px;
+    padding-bottom: 15px;
+    position: absolute;
+    left: -18px;
+    background-color: $headerFooter;
+    z-index: 1;
+
+    &__city {
+        padding: 15px 20px 0;
+    }
+
+    &__link {
+        color: $colorFive;
+        font-size: 16px;
+
+        &:hover {
+            color: $colorOne;
+        }
+    }
+}
+
+
 .logo {
     width: 180px;
     display: block;
-    margin-top: 10px;
+    margin: 5px 0;
 
     &__img {
         width: 100%;
@@ -128,17 +176,17 @@ $headerFooter: #24282c;
 
 .menu {
     height: 50%;
-
+  
     &__list {
         height: 100%;
         display: flex;
         align-items: center;
+        
     }
 
     &__item {
         margin-left: 150px;
-        padding: 5px 10px 10px;
-        position: relative;
+        padding: 15px 10px;
         transition: .2s;
 
         &:first-child {
@@ -167,17 +215,30 @@ $headerFooter: #24282c;
 .sub-menu {
     &__list {
         position: absolute;
-        min-width: 200px;
+        width: 100%;
         background-color: $headerFooter;
         border-top: 1px solid $colorOne;
         left: 0;
-        top: 100%;
+      top: 120px;
         transition: .3s;
         visibility: hidden;
+        z-index: 2;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 300vh;
+            height: 100%;
+            background-color: $headerFooter;
+            position: absolute;
+            left: -100vh;
+            z-index: -1;
+        }
     }
 
     &__item {
         border-bottom: 1px solid $headerFooter;
+        width: 32%;
 
         &:hover {
             border-color: $colorOne;
@@ -200,15 +261,16 @@ $headerFooter: #24282c;
 
 
 
+
 .video {
     .container {
         max-width: 1920px;
-        height: 810px;
-        padding-bottom: 50px;
+        height: calc(100vh - 115px);
+        padding-top: 80px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: end;
+        justify-content: center;
         text-align: center;
         background-image: url("../img/video_bg.jpg");
         background-repeat: no-repeat;
@@ -217,10 +279,11 @@ $headerFooter: #24282c;
 
     }
 
+
     &__triangle {
-        margin-top: 200px;
+        margin-top: 13%;
         border: 18px solid transparent;
-        border-top: 20px solid $colorThree;
+        border-top: 20px solid $colorOne;
         display: block;
         width: 0;
         height: 0;
@@ -287,7 +350,7 @@ $headerFooter: #24282c;
     background-color: $colorTwo;
 
     .container {
-        padding: 110px 0 130px;
+        padding: 55px 0;
         display: flex;
         justify-content: space-between;
     }
@@ -329,7 +392,7 @@ $headerFooter: #24282c;
     background-attachment: fixed;
 
     .container {
-        padding: 100px 0 40px;
+        padding: 55px 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -385,7 +448,7 @@ $headerFooter: #24282c;
         color: #000000;
 
         &:hover {
-            outline: 1px solid $colorThree;
+            outline: 1px solid $colorOne;
         }
 
         &:active {
@@ -404,7 +467,7 @@ $headerFooter: #24282c;
 
     &__info {
         width: 50%;
-        padding: 25px 0 0 15px;
+        padding: 0 0 0 15px;
         text-align-last: left;
     }
 
@@ -502,7 +565,7 @@ $headerFooter: #24282c;
 .painting {
     .container {
         display: flex;
-        padding: 105px 0 130px;
+        padding: 100px 0;
     }
 
     &__image {
@@ -603,7 +666,6 @@ address {
     width: 55px;
     height: 55px;
     border: 3px solid $colorOne;
-    border-radius: 100%;
     background-image: url("../img/arrow_to_top.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -1006,9 +1068,17 @@ address {
     }
 }
 
+a.contacts {
+    &__info.vk {
+        width: 60px;
+        margin: 0 auto;
+    }
+}
+
 .map {
 
     .container {
         max-width: 1920px;
+        height: 50vh;
     }
 }
