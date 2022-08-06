@@ -89,12 +89,13 @@ $headerFooter: #24282c;
     position: sticky;
     top: 0;
     z-index: 10;
+
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
-     }
+
+    }
 
     &__contact {
         padding: 15px 0;
@@ -176,12 +177,12 @@ $headerFooter: #24282c;
 
 .menu {
     height: 50%;
-  
+
     &__list {
         height: 100%;
         display: flex;
         align-items: center;
-        
+
     }
 
     &__item {
@@ -200,7 +201,7 @@ $headerFooter: #24282c;
         }
 
         &:hover .sub-menu {
-            &__list {
+            &__wrap {
                 visibility: visible;
             }
         }
@@ -213,27 +214,24 @@ $headerFooter: #24282c;
 }
 
 .sub-menu {
-    &__list {
-        position: absolute;
+    &__wrap {
         width: 100%;
-        background-color: $headerFooter;
-        border-top: 1px solid $colorOne;
+        position: absolute;
         left: 0;
-      top: 120px;
+        top: 114px;
         transition: .3s;
         visibility: hidden;
         z-index: 2;
+        background-color: $headerFooter;
+    }
 
-        &::before {
-            content: '';
-            display: block;
-            width: 300vh;
-            height: 100%;
-            background-color: $headerFooter;
-            position: absolute;
-            left: -100vh;
-            z-index: -1;
-        }
+    &__list {
+        max-width: 1080px;
+        margin: 0 auto;
+        // background-color: $headerFooter;
+        border-top: 1px solid $colorOne;
+
+
     }
 
     &__item {
