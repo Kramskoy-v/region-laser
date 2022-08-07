@@ -85,10 +85,10 @@ $headerFooter: #24282c;
 }
 
 .header {
-    background-color: $headerFooter;
     position: sticky;
     top: 0;
     z-index: 10;
+    background-color: $headerFooter;
 
     .container {
         display: flex;
@@ -163,16 +163,24 @@ $headerFooter: #24282c;
     }
 }
 
-
+.hidden {
+    display: none;
+    }
 .logo {
     width: 180px;
     display: block;
     margin: 5px 0;
+    transition: .4s;
 
     &__img {
         width: 100%;
         object-fit: contain;
     }
+}
+
+.scale {
+    width: 100px;
+    transition: .4s;
 }
 
 .menu {
@@ -228,7 +236,6 @@ $headerFooter: #24282c;
     &__list {
         max-width: 1080px;
         margin: 0 auto;
-        // background-color: $headerFooter;
         border-top: 1px solid $colorOne;
 
 
@@ -256,6 +263,7 @@ $headerFooter: #24282c;
         width: 100%;
     }
 }
+
 
 
 

@@ -407,11 +407,11 @@ li {
 }
 
 .header {
-  background-color: #24282c;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 10;
+  background-color: #24282c;
 }
 .header .container {
   display: -webkit-box;
@@ -479,15 +479,29 @@ li {
   color: #ffc700;
 }
 
+.hidden {
+  display: none;
+}
+
 .logo {
   width: 180px;
   display: block;
   margin: 5px 0;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 .logo__img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.scale {
+  width: 100px;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .menu {
