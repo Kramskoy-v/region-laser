@@ -104,11 +104,12 @@ $headerFooter: #24282c;
         height: 50%;
         align-items: center;
         border-bottom: 2px solid #333438;
+
     }
-    .hidden {
+    
+    &__contact.hidden {
         display: none;
     }
-
     &__link {
         color: $colorFive;
         font-size: 16px;

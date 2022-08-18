@@ -438,7 +438,7 @@ li {
           align-items: center;
   border-bottom: 2px solid #333438;
 }
-.header .hidden {
+.header__contact.hidden {
   display: none;
 }
 .header__link {
@@ -1522,6 +1522,9 @@ a.contacts__info.vk {
   .header__contact .hidden {
     display: none;
   }
+  .header__link.hidden {
+    display: none;
+  }
   .hamburger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1562,7 +1565,10 @@ a.contacts__info.vk {
     text-align: center;
     font-size: 22px;
   }
-  .sub-menu__arrow.hidden, .sub-menu__wrap.hidden {
+  .sub-menu__arrow.hidden {
+    display: none;
+  }
+  .sub-menu__wrap.hidden {
     display: none;
   }
   .sub-menu__item {

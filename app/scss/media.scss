@@ -114,12 +114,14 @@
             border: none;
             width: 100%;
             justify-content: center;
-
             .hidden {
                 display: none;
             }
         }
 
+        &__link.hidden {
+            display: none;
+        }
     }
 
     .hamburger {
@@ -160,8 +162,10 @@
     }
 
     .sub-menu {
+        &__arrow.hidden {
+            display: none;
+        }
 
-        &__arrow.hidden,
         &__wrap.hidden {
             display: none;
         }
@@ -235,15 +239,17 @@
     .feed-form .container {
         padding: 50px 10px;
         width: 100%;
+
         form {
             width: 100%;
             overflow: hidden;
         }
     }
+
     .contacts.form-page {
         padding-top: 40px;
     }
-    
+
 }
 
 @media(max-width: 576px) {
@@ -324,7 +330,7 @@
         &__info {
             padding: 10px 0;
             text-align-last: left;
-            
+
         }
 
         .button {
@@ -353,7 +359,7 @@
 
         &__wrap {
             flex-direction: column;
-           
+
         }
 
         &__pic {
@@ -371,33 +377,40 @@
             flex-direction: column;
             align-items: center;
         }
+
         &__item {
             margin: 20px 0;
             width: 80%;
         }
     }
+
     .input {
         &__wrapper {
             width: 75%;
         }
     }
+
     .feed-form {
         &__button {
             width: 75%;
         }
+
         .container {
             form {
                 padding-top: 0;
             }
         }
     }
-    .info-form     {
+
+    .info-form {
         &__wrap {
             padding-top: 30px;
         }
+
         &__item {
             margin: 30px 0;
         }
+
         .container {
             padding: 30px 10px;
         }
