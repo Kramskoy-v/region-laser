@@ -105,6 +105,9 @@ $headerFooter: #24282c;
         align-items: center;
         border-bottom: 2px solid #333438;
     }
+    .hidden {
+        display: none;
+    }
 
     &__link {
         color: $colorFive;
@@ -125,7 +128,7 @@ $headerFooter: #24282c;
         font-size: 16px;
         position: relative;
         cursor: pointer;
-
+      
         &:hover {
             .sub-location {
                 visibility: visible;
@@ -136,6 +139,10 @@ $headerFooter: #24282c;
             &:hover {
                 color: $colorOne;
             }
+           span {
+            font-size: .7em;
+           }
+            
         }
     }
 }
@@ -163,9 +170,8 @@ $headerFooter: #24282c;
     }
 }
 
-.hidden {
-    display: none;
-    }
+
+
 .logo {
     width: 180px;
     display: block;
@@ -180,7 +186,7 @@ $headerFooter: #24282c;
 
 .scale {
     width: 100px;
-    transition: .4s;
+    transition: .2s;
 }
 
 .menu {
@@ -218,6 +224,9 @@ $headerFooter: #24282c;
     &__link {
         color: $colorOne;
         font-size: 18px;
+        span {
+            font-size: .6em;
+        }
     }
 }
 
@@ -263,28 +272,63 @@ $headerFooter: #24282c;
         width: 100%;
     }
 }
-
-
-
-
-
+.hamburger {
+	display: none;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+	& span {
+		width: 35px;
+		height: 2px;
+		background-color: $colorOne;
+		margin-top: 5px;
+		transition: 0.7s;
+    }
+	&--active {
+		:first-child {
+			opacity: 0;
+			transform: translateY(-100px);
+		}
+		:nth-child(2) {
+			transform: translateY(3px) rotate(45deg);
+		}
+		:last-child {
+			transform: translateY(-3px) rotate(135deg);
+		}
+	}
+}
 .video {
     .container {
         max-width: 1920px;
         height: calc(100vh - 115px);
+        position: relative;
+        background-color: $colorTwo;
+        overflow: hidden;
+    }
+
+    video {
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        width: 100%;
+        filter: brightness(0.6);
+    }
+
+    &__wrap {
         padding-top: 80px;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-        background-image: url("../img/video_bg.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-
+        position: relative;
+        z-index: 1;
     }
-
 
     &__triangle {
         margin-top: 13%;
@@ -646,6 +690,7 @@ address {
 
 .contacts {
     .button {
+        display: block;
         margin: 0 0 40px auto;
     }
 
@@ -680,6 +725,11 @@ address {
     z-index: 30;
     cursor: pointer;
     display: none;
+    transition: .3s;
+    &:hover {
+        background-color: $colorTwo;
+        transform: scale(.97);
+    }
 }
 
 .back_to_top-show {

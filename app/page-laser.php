@@ -6,111 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лазерная резка</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <a class="logo" href="../index.html">
-                <img src="../img/logo.svg" alt="Логотип РЛЗ" class="logo__img">
-            </a>
-            <div class="header__wrap">
-                <div class="header__contact">
-                    <ul class="location">
-                        <li class="location__city"><span>Москва</span>
-                            <ul class="sub-location">
-                                <li class="sub-location__city">
-                                    <a href="#" class="sub-location__link">Воронеж</a>
-                                </li>
-                                <li class="sub-location__city">
-                                    <a href="#" class="sub-location__link">Липецк</a>
-                                </li>
-                                <li class="sub-location__city">
-                                    <a href="#" class="sub-location__link">Другой регион</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <a href="mailto:2120001@rl36.ru" class="header__link">2120001@rl36.ru</a>
-                    <a href="tel:+74732120001" class="header__link">+7 (499) 490 30 00</a>
-                </div>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Услуги</a>
-                            <div class="sub-menu__wrap">
-                                <ul class="sub-menu__list">
-                                    <li class="sub-menu__item">
-                                        <a href="laser-page.html" class="sub-menu__link">Лазерная резка</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Плазменная резка</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Гибка металла</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Сварка металла</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Порошковая покраска</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Изг. металлоконструкции</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Разработка документации</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Продукция</a>
-                            <div class="sub-menu__wrap">
-                                <ul class="sub-menu__list">
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Изготовление кронштейнов</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Металлические фланцы</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Металлические емкости</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Худ. изделия</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">По образцу</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">О нас</a>
-                            <div class="sub-menu__wrap">
-                                <ul class="sub-menu__list">
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Взаимодействие</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Доставка</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="form-page.html" class="sub-menu__link">Заявка</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="menu__item">
-                            <a href="contacts-page.html" class="menu__link">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <?php
+    include 'header.php';
+    ?>
     <main>
         <section class="top-page">
             <div class="container">
@@ -120,8 +23,8 @@
         </section>
         <div class="breadcrumbs">
             <div class="container">
-                <a href="../index.html" class="breadcrumbs__link">Главная /</a>
-                <a href="http://" class="breadcrumbs__link">Услуги /</a>
+                <a href="index.html" class="breadcrumbs__link">Главная /</a>
+                <a href="#" class="breadcrumbs__link">Услуги /</a>
                 <span class="breadcrumbs__link">Лазерная резка</span>
             </div>
         </div>
@@ -130,26 +33,26 @@
                 <div class="info-block__items">
                     <div class="info-block__card">
                         <div class="info-block__image">
-                            <img src="../img/laser_page_1.jpg" alt="" class="info-block__img">
+                            <img src="img/laser_page_1.jpg" alt="" class="info-block__img">
                         </div>
                         <h3 class="info-block__title">Высокая точность обработки</h3>
                     </div>
                     <div class="info-block__card">
                         <div class="info-block__image">
-                            <img src="../img/laser_page_2.jpg" alt="" class="info-block__img">
+                            <img src="img/laser_page_2.jpg" alt="" class="info-block__img">
                         </div>
                         <h3 class="info-block__title">Отсутствие необходимости в финишной обработке</h3>
                     </div>
                     <div class="info-block__card">
                         <div class="info-block__image">
-                            <img src="../img/laser_page_3.jpg" alt="" class="info-block__img">
+                            <img src="img/laser_page_3.jpg" alt="" class="info-block__img">
                         </div>
                         <h3 class="info-block__title">Экономичное использование материала</h3>
                     </div>
                 </div>
                 <div class="info-block__wrap">
                     <div class="info-block__pic">
-                        <img src="../img/laser_page_laser.jpg" alt="" class="info-block__img">
+                        <img src="img/laser_page_laser.jpg" alt="" class="info-block__img">
                     </div>
                     <p class="info-block__desc">Лазерная резка стали является достаточно
                         экономичным, удобным и эффективным
@@ -176,35 +79,35 @@
                 <div class="light-work__wrap">
                     <div class="light-work__item">
                         <div class="light-work__icon">
-                            <img src="../img/bid_icon.png" alt="" class="light-work__img">
+                            <img src="img/bid_icon.png" alt="" class="light-work__img">
                         </div>
                         <h3 class="light-work__subtitle">ОСТАВЛЯЕТЕ НАМ ЗАЯВКУ</h3>
                         <p class="light-work__desc">Любым удобным способом-по почте, WhatsAp или по телефону</p>
                     </div>
                     <div class="light-work__item">
                         <div class="light-work__icon">
-                            <img src="../img/consult_icon.png" alt="" class="light-work__img">
+                            <img src="img/consult_icon.png" alt="" class="light-work__img">
                         </div>
                         <h3 class="light-work__subtitle">КОНСУЛЬТИРУЕМ ПО ИЗГОТОВЛЕНИЮ</h3>
                         <p class="light-work__desc">Уточняем необходимые параметры заказа и сроки</p>
                     </div>
                     <div class="light-work__item">
                         <div class="light-work__icon">
-                            <img src="../img/doc_icon.png" alt="" class="light-work__img">
+                            <img src="img/doc_icon.png" alt="" class="light-work__img">
                         </div>
                         <h3 class="light-work__subtitle">ПОДГОТАВЛИВАЕМ ТЕХ ДОКУМЕНТАЦИЮ</h3>
                         <p class="light-work__desc">Рассчитываем смету заказа и подготавливаем чертежи</p>
                     </div>
                     <div class="light-work__item">
                         <div class="light-work__icon">
-                            <img src="../img/target_icon.png" alt="" class="light-work__img">
+                            <img src="img/target_icon.png" alt="" class="light-work__img">
                         </div>
                         <h3 class="light-work__subtitle">ИЗГОТОВЛИВАЕМ</h3>
                         <p class="light-work__desc">После оплаты отправляем заказ в изготовление</p>
                     </div>
                     <div class="light-work__item">
                         <div class="light-work__icon">
-                            <img src="../img/shipping_icon.png" alt="" class="light-work__img">
+                            <img src="img/shipping_icon.png" alt="" class="light-work__img">
                         </div>
                         <h3 class="light-work__subtitle">ДОСТАВЛЯЕМ</h3>
                         <p class="light-work__desc">Отправляем ваш заказ в любой регион РФ</p>
@@ -217,7 +120,7 @@
                 <h2 class="booking solution__title">Мы возьмемся за любой заказ — от простейшей шайбы до огромных и
                     сложных металлоконструкций.<br>
                     Наши возможности позволяют нам изготавливать широкий спектр различных изделий</h2>
-                <div class="button">Заказать</div>
+                <a href="page-form.php" class="button">Заказать</a>
             </div>
         </section>
         <section class="products">
@@ -226,7 +129,7 @@
                 <div class="card__wrap">
                     <div class="card__item">
                         <div class="card__image">
-                            <img src="../img/laser_products_1.jpg" alt="" class="card__img">
+                            <img src="img/laser_products_1.jpg" alt="" class="card__img">
                         </div>
                         <div class="card__info">
                             <h3 class="card__subtitle">Ёмкости металлические</h3>
@@ -236,7 +139,7 @@
                     </div>
                     <div class="card__item">
                         <div class="card__image">
-                            <img src="../img/laser_products_2.jpg" alt="" class="card__img">
+                            <img src="img/laser_products_2.jpg" alt="" class="card__img">
                         </div>
                         <div class="card__info">
                             <h3 class="card__subtitle">Фланцы, пластины</h3>
@@ -246,7 +149,7 @@
                     </div>
                     <div class="card__item">
                         <div class="card__image">
-                            <img src="../img/laser_products_3.jpg" alt="" class="card__img">
+                            <img src="img/laser_products_3.jpg" alt="" class="card__img">
                         </div>
                         <div class="card__info">
                             <h3 class="card__subtitle">Корпуса, кожухи</h3>
@@ -255,7 +158,7 @@
                     </div>
                     <div class="card__item">
                         <div class="card__image">
-                            <img src="../img/laser_products_4.jpg" alt="" class="card__img">
+                            <img src="img/laser_products_4.jpg" alt="" class="card__img">
                         </div>
                         <div class="card__info">
                             <h3 class="card__subtitle">Отбойники</h3>
@@ -265,7 +168,7 @@
                     </div>
                     <div class="card__item">
                         <div class="card__image">
-                            <img src="../img/laser_products_5.jpg" alt="" class="card__img">
+                            <img src="img/laser_products_5.jpg" alt="" class="card__img">
                         </div>
                         <div class="card__info">
                             <h3 class="card__subtitle">Металлическая мебель</h3>
@@ -274,7 +177,7 @@
                     </div>
                     <div class="card__item">
                         <div class="card__image">
-                            <img src="../img/laser_products_6.jpg" alt="" class="card__img">
+                            <img src="img/laser_products_6.jpg" alt="" class="card__img">
                         </div>
                         <div class="card__info">
                             <h3 class="card__subtitle">Изготовление по образцу</h3>
@@ -286,30 +189,8 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="requisites">
-                <h4 class="requisites__name">ООО «Регион Лазер»</h4>
-                <h5 class="requisites__legal">Юридический адрес :</h5>
-                <p class="requisites__desc">394016, Воронежская обл, Воронеж г,<br>
-                    Беговая ул, дом 14, квартира 26</p>
-                <p class="requisites__desc">ОГРН: 1193668025803</p>
-                <p class="requisites__desc">ИНН: 3664242482</p>
-            </div>
-            <div class="contacts">
-                <div class="button">Заказать</div>
-                <address>
-                    <p class="contacts__info">г. Москва, просп. Андропова, 22,<br>
-                        БЦ Нагатинский</p>
-                    <a href="tel:+74994903000" class="contacts__info">+7(499) 490 30 00</a>
-                    <a href="https://wa.me/+9003001661" class="contacts__info">WhatsApp: 8 900 300 16 61</a>
-                    <a href="mailto:2120001@RL36.ru" class="contacts__info">2120001@RL36.ru</a>
-                </address>
-            </div>
-        </div>
-        <div class="back_to_top"></div>
-    </footer>
-    <script src="../js/main.js"></script>
+    <?php include 'footer.php'?>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

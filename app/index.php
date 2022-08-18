@@ -11,7 +11,10 @@
 </head>
 
 <body>
-    <header class="header">
+    <?php
+    include 'header.php';
+    ?>
+    <!-- <header class="header">
         <div class="container">
             <a class="logo" href="#">
                 <img src="img/logo.svg" alt="Логотип РЛЗ" class="logo__img">
@@ -19,7 +22,7 @@
             <div class="header__wrap">
                 <div class="header__contact">
                     <ul class="location">
-                        <li class="location__city"><span>Москва</span>
+                        <li class="location__city"><span>Москва <span>▼</span></span>
                             <ul class="sub-location">
                                 <li class="sub-location__city">
                                     <a href="#" class="sub-location__link">Воронеж</a>
@@ -33,13 +36,13 @@
                             </ul>
                         </li>
                     </ul>
-                    <a href="mailto:2120001@rl36.ru" class="header__link">2120001@rl36.ru</a>
+                    <a href="mailto:2120001@rl36.ru" class="header__link hidden">2120001@rl36.ru</a>
                     <a href="tel:+74732120001" class="header__link">+7 (499) 490 30 00</a>
                 </div>
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Услуги</a>
+                            <a href="#" class="menu__link">Услуги <span>▼</span></a>
                             <div class="sub-menu__wrap">
                                 <ul class="sub-menu__list">
                                     <li class="sub-menu__item">
@@ -67,8 +70,8 @@
                             </div>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Продукция</a>
-                            <div class="sub-menu__wrap">
+                            <a href="#" class="menu__link">Продукция <span class="sub-menu__arrow hidden">▼</span></a>
+                            <div class="sub-menu__wrap hidden">
                                 <ul class="sub-menu__list">
                                     <li class="sub-menu__item">
                                         <a href="#" class="sub-menu__link">Изготовление кронштейнов</a>
@@ -90,37 +93,32 @@
                         </li>
                         <li class="menu__item">
                             <a href="#" class="menu__link">О нас</a>
-                            <div class="sub-menu__wrap">
-                                <ul class="sub-menu__list">
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Взаимодействие</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Доставка</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="pages/form-page.html" class="sub-menu__link">Заявка</a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
                         <li class="menu__item">
                             <a href="pages/contacts-page.html" class="menu__link">Контакты</a>
                         </li>
                     </ul>
                 </nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
-    </header>
+    </header> -->
     <main>
         <section class="video">
             <div class="container">
-                <h1 class="page__title">ИЗГОТОВЛЕНИЕ ИЗДЕЛИЙ ИЗ МЕТАЛЛА</h1>
-                <h2 class="page__subtitle">Комплексная металлообработка на высокоточном оборудовании в разумные
-                    сроки<br>
-                    Работаем с Юридическими и Физическими лицами</h2>
-                <a href="pages/form-page.html" class="button">Оформить заказ</a>
-                <div class="video__triangle"></div>
+                <div class="video__wrap">
+                    <h1 class="page__title">ИЗГОТОВЛЕНИЕ ИЗДЕЛИЙ ИЗ МЕТАЛЛА</h1>
+                    <h2 class="page__subtitle">Комплексная металлообработка на высокоточном оборудовании в разумные
+                        сроки<br>
+                        Работаем с Юридическими и Физическими лицами</h2>
+                    <a href="pages/form-page.php" class="button">Оформить заказ</a>
+                    <div class="video__triangle"></div>
+                </div>
+                <video src="video/main.mp4" type="video/mp4" muted autoplay loop> </video>
             </div>
         </section>
         <section class="features">
@@ -178,7 +176,7 @@
                             <p class="card__desc">Размер рабочего поля 2000х3000мм Толщины от 0,5мм до 16мм</p>
                         </div>
                     </a>
-                    <div class="card__item">
+                    <a href="#" class="card__item">
                         <div class="card__image">
                             <img src="img/services_plasma.jpg" alt="" class="card__img">
                         </div>
@@ -186,8 +184,8 @@
                             <h3 class="card__subtitle">Плазменная резка листового металла</h3>
                             <p class="card__desc">Размер рабочего поля 1500х3000мм Толщины от 5мм до 40мм</p>
                         </div>
-                    </div>
-                    <div class="card__item">
+                    </a>
+                    <a href="#" class="card__item">
                         <div class="card__image">
                             <img src="img/services_bend.jpg" alt="" class="card__img">
                         </div>
@@ -195,8 +193,8 @@
                             <h3 class="card__subtitle">Гибка листового металла</h3>
                             <p class="card__desc">Современное высокоточное ЧПУ оборудование</p>
                         </div>
-                    </div>
-                    <div class="card__item">
+                    </a>
+                    <a href="#" class="card__item">
                         <div class="card__image">
                             <img src="img/services_welding.jpg" alt="" class="card__img">
                         </div>
@@ -204,7 +202,7 @@
                             <h3 class="card__subtitle">Все виды сварочных работ</h3>
                             <p class="card__desc">Новейшее оборудование для сварки толщин от 0,8мм</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -249,7 +247,8 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <?php include 'footer.php'?>
+   <!--  <footer class="footer">
         <div class="container">
             <div class="requisites">
                 <h4 class="requisites__name">ООО «Регион Лазер»</h4>
@@ -260,7 +259,7 @@
                 <p class="requisites__desc">ИНН: 3664242482</p>
             </div>
             <div class="contacts">
-                <div class="button">Заказать</div>
+                <a href="pages/form-page.html" class="button">Заказать</a>
                 <address>
                     <p class="contacts__info">г. Москва, просп. Андропова, 22,<br>
                         БЦ Нагатинский</p>
@@ -271,7 +270,7 @@
             </div>
         </div>
         <div class="back_to_top"></div>
-    </footer>
+    </footer> -->
     <script src="js/main.js"></script>
 </body>
 

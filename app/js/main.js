@@ -1,29 +1,40 @@
 //кнопка вверх при скроле
 'use strict';
 
-	function trackScroll() {
-		let scrolled = window.pageYOffset;
-		let coords = document.documentElement.clientHeight;
+//Hamburger menu
+let hamburger = document.querySelector('.hamburger'),
+	mobileMenu = document.querySelector('.menu'),
+	linkClose = document.querySelector('.menu__list');
 
-		if (scrolled > coords) {
-			goTopBtn.classList.add('back_to_top-show');
-		}
-		if (scrolled < coords) {
-			goTopBtn.classList.remove('back_to_top-show');
-		}
+hamburger.addEventListener('click', function () {
+	hamburger.classList.toggle('hamburger--active');
+	mobileMenu.classList.toggle('menu--active');
+});
+
+// arrow back to top	
+function trackScroll() {
+	let scrolled = window.pageYOffset;
+	let coords = document.documentElement.clientHeight;
+
+	if (scrolled > coords) {
+		goTopBtn.classList.add('back_to_top-show');
 	}
-
-	function backToTop() {
-		if (window.pageYOffset > 0) {
-			window.scrollBy(0, -80);
-			setTimeout(backToTop, 0);
-		}
+	if (scrolled < coords) {
+		goTopBtn.classList.remove('back_to_top-show');
 	}
+}
 
-	let goTopBtn = document.querySelector('.back_to_top');
+function backToTop() {
+	if (window.pageYOffset > 0) {
+		window.scrollBy(0, -80);
+		setTimeout(backToTop, 0);
+	}
+}
 
-	window.addEventListener('scroll', trackScroll);
-	goTopBtn.addEventListener('click', backToTop);
+let goTopBtn = document.querySelector('.back_to_top');
+
+window.addEventListener('scroll', trackScroll);
+goTopBtn.addEventListener('click', backToTop);
 
 
 // header sticky
@@ -32,13 +43,12 @@ let logo = document.querySelector('.logo'),
 	submenu = document.querySelectorAll('.sub-menu__wrap');
 
 window.addEventListener('scroll', function () {
-	if (window.scrollY > 80) {
+	if (window.scrollY >= 1) {
 		elementHidden.classList.add('hidden');
 		logo.classList.add('scale');
 		submenu.forEach((el) => {
 			el.style.top = '70px';
 		});
-
 	} else {
 		elementHidden.classList.remove('hidden');
 		logo.classList.remove('scale');
@@ -74,28 +84,15 @@ Array.prototype.forEach.call(inputs, function (input) {
 });
 
 
-
 // Отправка данных на сервер
 function send(event, php) {
-	console.log("Отправка запроса");
 	event.preventDefault ? event.preventDefault() : event.returnValue = false;
 	var req = new XMLHttpRequest();
 	req.open('POST', php, true);
 	req.onload = function () {
 		if (req.status >= 200 && req.status < 400) {
-			json = JSON.parse(this.response); // Ебанный internet explorer 11
-			console.log(json);
-
 			// ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
-			if (json.result == "success") {
-
-				// Если сообщение отправлено
-				alert("Сообщение отправлено");
-
-			} else {
-				// Если произошла ошибка
-				alert("Ошибка. Сообщение не отправлено");
-			}
+			alert("Сообщение отправлено");
 			// Если не удалось связаться с php файлом
 		} else { alert("Ошибка сервера. Номер: " + req.status); }
 	};
