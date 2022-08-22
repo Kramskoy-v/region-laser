@@ -9,10 +9,10 @@
                         <li class="location__city"><span>Москва <span>▼</span></span>
                             <ul class="sub-location">
                                 <li class="sub-location__city">
-                                    <a href="#" class="sub-location__link">Воронеж</a>
+                                    <a href="../vrn/index.php" class="sub-location__link">Воронеж</a>
                                 </li>
                                 <li class="sub-location__city">
-                                    <a href="#" class="sub-location__link">Липецк</a>
+                                    <a href="../lpk/index.php" class="sub-location__link">Липецк</a>
                                 </li>
                                 <li class="sub-location__city">
                                     <a href="#" class="sub-location__link">Другой регион</a>
@@ -20,7 +20,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <a href="mailto:2120001@rl36.ru" class="header__link hidden">2120001@rl36.ru</a>
+                    <a href="mailto:4903000@RL36.ru" class="header__link hidden">4903000@RL36.ru</a>
                     <a href="tel:+74732120001" class="header__link">+7 (499) 490 30 00</a>
                 </div>
                 <nav class="menu">

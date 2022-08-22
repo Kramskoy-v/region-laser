@@ -478,6 +478,8 @@ li {
   padding: 15px 20px 0;
 }
 .sub-location__link {
+  display: block;
+  width: 100%;
   color: #909090;
   font-size: 16px;
 }
@@ -1374,6 +1376,13 @@ address {
   height: 13px;
 }
 
+.page-form .button {
+  display: none;
+}
+.page-form .requisites {
+  margin-top: 0;
+}
+
 .contacts.form-page {
   padding-top: 90px;
 }
@@ -1423,6 +1432,96 @@ a.contacts__info.vk {
 .map .container {
   max-width: 1920px;
   height: 50vh;
+}
+
+.popup {
+  min-width: 250px;
+  padding: 10px 20px 15px;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #24282c;
+  border: 1px solid #ffc700;
+  display: none;
+  z-index: 11;
+}
+.popup__title {
+  text-align: center;
+  color: #909090;
+  line-height: 1.5;
+}
+.popup__wrap {
+  padding: 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.popup__btn {
+  padding: 5px 15px;
+  background-color: #ffc700;
+  color: #3d4148;
+  border: 1px solid #24282c;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.popup__btn:hover {
+  background-color: #3d4148;
+  color: #ffc700;
+  border-color: #ffc700;
+}
+.popup.active {
+  display: block;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 31, 31, 0.7254901961);
+  z-index: 12;
+  display: none;
+}
+.modal__location {
+  position: fixed;
+  width: 500px;
+  top: 20%;
+  left: 50%;
+  padding: 30px 20px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #24282c;
+  border: 1px solid #ffc700;
+}
+.modal__title {
+  color: #ffffff;
+  text-align: center;
+}
+.modal__list {
+  width: 200px;
+  margin: 20px auto;
+}
+.modal__link {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.modal__link:hover {
+  color: #ffc700;
+}
+.modal.active {
+  display: block;
 }
 
 @media (max-width: 1200px) {
@@ -1534,8 +1633,8 @@ a.contacts__info.vk {
     position: fixed;
     z-index: 2;
     background-color: rgba(26, 26, 26, 0.99);
-    top: 0;
-    left: -100%;
+    top: -120%;
+    left: 0;
     width: 100%;
     height: 100vh;
     -webkit-transition: 0.7s;
@@ -1543,7 +1642,7 @@ a.contacts__info.vk {
     transition: 0.7s;
   }
   .menu--active {
-    left: 0;
+    top: 0;
     -webkit-transition: 0.7s;
     -o-transition: 0.7s;
     transition: 0.7s;

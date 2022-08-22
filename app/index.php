@@ -11,103 +11,10 @@
 </head>
 
 <body>
-    <?php
-    include 'header.php';
-    ?>
-    <!-- <header class="header">
-        <div class="container">
-            <a class="logo" href="#">
-                <img src="img/logo.svg" alt="Логотип РЛЗ" class="logo__img">
-            </a>
-            <div class="header__wrap">
-                <div class="header__contact">
-                    <ul class="location">
-                        <li class="location__city"><span>Москва <span>▼</span></span>
-                            <ul class="sub-location">
-                                <li class="sub-location__city">
-                                    <a href="#" class="sub-location__link">Воронеж</a>
-                                </li>
-                                <li class="sub-location__city">
-                                    <a href="#" class="sub-location__link">Липецк</a>
-                                </li>
-                                <li class="sub-location__city">
-                                    <a href="#" class="sub-location__link">Другой регион</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <a href="mailto:2120001@rl36.ru" class="header__link hidden">2120001@rl36.ru</a>
-                    <a href="tel:+74732120001" class="header__link">+7 (499) 490 30 00</a>
-                </div>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Услуги <span>▼</span></a>
-                            <div class="sub-menu__wrap">
-                                <ul class="sub-menu__list">
-                                    <li class="sub-menu__item">
-                                        <a href="pages/laser-page.html" class="sub-menu__link">Лазерная резка</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Плазменная резка</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Гибка металла</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Сварка металла</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Порошковая покраска</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Изг. металлоконструкции</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Разработка документации</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Продукция <span class="sub-menu__arrow hidden">▼</span></a>
-                            <div class="sub-menu__wrap hidden">
-                                <ul class="sub-menu__list">
-                                    <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Изготовление кронштейнов</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Металлические фланцы</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Металлические емкости</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Худ. изделия</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">По образцу</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">О нас</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="pages/contacts-page.html" class="menu__link">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </header> -->
-    <main>
+
+    <?php include 'header.php';?>
+    
+       <main>
         <section class="video">
             <div class="container">
                 <div class="video__wrap">
@@ -115,7 +22,7 @@
                     <h2 class="page__subtitle">Комплексная металлообработка на высокоточном оборудовании в разумные
                         сроки<br>
                         Работаем с Юридическими и Физическими лицами</h2>
-                    <a href="pages/form-page.php" class="button">Оформить заказ</a>
+                    <a href="page-form.php" class="button">Оформить заказ</a>
                     <div class="video__triangle"></div>
                 </div>
                 <video src="video/main.mp4" type="video/mp4" muted autoplay loop> </video>
@@ -167,7 +74,7 @@
             <div class="container">
                 <h2 class="services__title">Наши услуги</h2>
                 <div class="card__wrap">
-                    <a href="pages/laser-page.html" class="card__item">
+                    <a href="page-laser.php" class="card__item">
                         <div class="card__image">
                             <img src="img/services_laser.jpg" alt="" class="card__img">
                         </div>
@@ -247,30 +154,9 @@
             </div>
         </section>
     </main>
+
     <?php include 'footer.php'?>
-   <!--  <footer class="footer">
-        <div class="container">
-            <div class="requisites">
-                <h4 class="requisites__name">ООО «Регион Лазер»</h4>
-                <h5 class="requisites__legal">Юридический адрес :</h5>
-                <p class="requisites__desc">394016, Воронежская обл, Воронеж г,<br>
-                    Беговая ул, дом 14, квартира 26</p>
-                <p class="requisites__desc">ОГРН: 1193668025803</p>
-                <p class="requisites__desc">ИНН: 3664242482</p>
-            </div>
-            <div class="contacts">
-                <a href="pages/form-page.html" class="button">Заказать</a>
-                <address>
-                    <p class="contacts__info">г. Москва, просп. Андропова, 22,<br>
-                        БЦ Нагатинский</p>
-                    <a href="tel:+74994903000" class="contacts__info">+7(499) 490 30 00</a>
-                    <a href="https://wa.me/+9003001661" class="contacts__info">WhatsApp: 8 900 300 16 61</a>
-                    <a href="mailto:2120001@RL36.ru" class="contacts__info">2120001@RL36.ru</a>
-                </address>
-            </div>
-        </div>
-        <div class="back_to_top"></div>
-    </footer> -->
+
     <script src="js/main.js"></script>
 </body>
 

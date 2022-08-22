@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <?php
-    include 'header.php';
-    ?>
+
+    <?php include 'header.php'; ?>
+
     <main>
         <section class="top-page">
             <div class="container">
@@ -189,7 +189,9 @@
             </div>
         </section>
     </main>
-    <?php include 'footer.php'?>
+
+    <?php include 'footer.php'; ?>
+
     <script src="js/main.js"></script>
 </body>
 
