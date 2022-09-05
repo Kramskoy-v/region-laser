@@ -6,7 +6,7 @@
             <div class="header__wrap">
                 <div class="header__contact">
                     <ul class="location">
-                        <li class="location__city"><span>Москва <span>▼</span></span>
+                        <li class="location__city"><span>Москва <span>&rsaquo;</span></span>
                             <ul class="sub-location">
                                 <li class="sub-location__city">
                                     <a href="../vrn/index.php" class="sub-location__link">Воронеж</a>
@@ -25,9 +25,9 @@
                 </div>
                 <nav class="menu">
                     <ul class="menu__list">
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Услуги <span>▼</span></a>
-                            <div class="sub-menu__wrap">
+                        <li class="menu__item hidden-item">
+                            <span class="menu__link menu__link-mobile">Услуги <span>&rsaquo;</span></span>
+                            <div class="sub-menu__wrap sub-menu-mobile">
                                 <ul class="sub-menu__list">
                                     <li class="sub-menu__item">
                                         <a href="page-laser.php" class="sub-menu__link">Лазерная резка</a>
@@ -54,7 +54,7 @@
                             </div>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Продукция <span class="sub-menu__arrow hidden">▼</span></a>
+                            <span  class="menu__link">Продукция <span class="sub-menu__arrow hidden">&rsaquo;</span></span>
                             <div class="sub-menu__wrap hidden">
                                 <ul class="sub-menu__list">
                                     <li class="sub-menu__item">

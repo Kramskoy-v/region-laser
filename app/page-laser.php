@@ -18,13 +18,13 @@
         <section class="top-page">
             <div class="container">
                 <h1 class="page__title">ЛАЗЕРНАЯ РЕЗКА ЛИСТОВОГО МЕТАЛЛА</h1>
-                <h2 class="page__subtitle">Размер рабочего поля 2000х3000мм</h2>
+                <h2 class="page__subtitle laser">Размер рабочего поля 2000х3000мм</h2>
             </div>
         </section>
         <div class="breadcrumbs">
             <div class="container">
-                <a href="index.html" class="breadcrumbs__link">Главная /</a>
-                <a href="#" class="breadcrumbs__link">Услуги /</a>
+                <a href="index.php" class="breadcrumbs__link">Главная /</a>
+                <a href="index.php#services_block" class="breadcrumbs__link">Услуги /</a>
                 <span class="breadcrumbs__link">Лазерная резка</span>
             </div>
         </div>

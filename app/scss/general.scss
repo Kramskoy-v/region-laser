@@ -102,8 +102,11 @@ $headerFooter: #24282c;
         display: flex;
         justify-content: space-between;
         height: 50%;
-        align-items: center;
+        align-items: baseline;
         border-bottom: 2px solid #333438;
+        position: relative;
+        z-index: 5;
+        background-color: $headerFooter;
 
     }
 
@@ -143,7 +146,9 @@ $headerFooter: #24282c;
             }
 
             span {
-                font-size: .7em;
+                font-size: 1.5em;
+             transform: translate(5px, 5px) rotate(90deg);
+                display: inline-block;
             }
 
         }
@@ -157,6 +162,7 @@ $headerFooter: #24282c;
     position: absolute;
     left: -18px;
     background-color: $headerFooter;
+    border: 1px solid $colorOne;
     z-index: 1;
 
     &__city {
@@ -182,7 +188,9 @@ $headerFooter: #24282c;
     display: block;
     margin: 5px 0;
     transition: .4s;
-
+    position: relative;
+    z-index: 5;
+    background-color: $headerFooter;
     &__img {
         width: 100%;
         object-fit: contain;
@@ -200,7 +208,7 @@ $headerFooter: #24282c;
     &__list {
         height: 100%;
         display: flex;
-        align-items: center;
+        align-items: baseline;
 
     }
 
@@ -212,7 +220,6 @@ $headerFooter: #24282c;
         &:first-child {
             margin-left: 0;
         }
-
         &:hover .menu {
             &__link {
                 color: $colorFour;
@@ -225,14 +232,18 @@ $headerFooter: #24282c;
             }
         }
     }
-
+ 
     &__link {
         color: $colorOne;
         font-size: 18px;
+        cursor: pointer;
 
         span {
-            font-size: .6em;
+            font-size: 1.3em;
+            transform: translate(5px, 5px) rotate(90deg);
+            display: inline-block;
         }
+       
     }
 }
 
@@ -247,12 +258,11 @@ $headerFooter: #24282c;
         z-index: 2;
         background-color: $headerFooter;
     }
-
+    
     &__list {
         max-width: 1080px;
         margin: 0 auto;
         border-top: 1px solid $colorOne;
-
 
     }
 
@@ -289,10 +299,14 @@ $headerFooter: #24282c;
 
     & span {
         width: 35px;
-        height: 2px;
+        height: 3px;
         background-color: $colorOne;
         margin-top: 5px;
         transition: 0.7s;
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
 
     &--active {
@@ -302,7 +316,7 @@ $headerFooter: #24282c;
         }
 
         :nth-child(2) {
-            transform: translateY(3px) rotate(45deg);
+            transform: translateY(4px) rotate(45deg);
         }
 
         :last-child {
@@ -312,6 +326,8 @@ $headerFooter: #24282c;
 }
 
 .video {
+    background-color: $colorTwo;
+
     .container {
         max-width: 1920px;
         height: calc(100vh - 115px);
@@ -327,11 +343,13 @@ $headerFooter: #24282c;
         transform: translate(-50%, -50%);
         z-index: 0;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
         filter: brightness(0.6);
+
     }
 
     &__wrap {
-        padding-top: 80px;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -341,16 +359,17 @@ $headerFooter: #24282c;
         position: relative;
         z-index: 1;
     }
-
-    &__triangle {
-        margin-top: 13%;
-        border: 18px solid transparent;
-        border-top: 20px solid $colorOne;
+    &__link {
         display: block;
-        width: 0;
-        height: 0;
+        width: 50px;
         -webkit-animation: shake-vertical 2s ease-out infinite both;
         animation: shake-vertical 2s ease-out infinite both;
+        position: absolute;
+        bottom: 20px;
+    }
+    &__arrow {
+      object-fit: contain;
+      width: 100%;
     }
 
     .page {
@@ -412,9 +431,41 @@ $headerFooter: #24282c;
     background-color: $colorTwo;
 
     .container {
-        padding: 55px 0;
+        padding: 75px 0 25px;
         display: flex;
         justify-content: space-between;
+
+        .swiper {
+            display: none;
+            padding: 60px 0;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 20px;
+        }
+
+        .swiper-button-next {
+            background-image: url('../img/arrow_next.png');
+        }
+
+        .swiper-button-prev {
+            background-image: url('../img/arrow_prev.png');
+        }
+
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after,
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after {
+            content: none;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: $colorOne;
+        }
     }
 
     &__item {
@@ -448,13 +499,13 @@ $headerFooter: #24282c;
 }
 
 .solution {
-    background-image: url("../img/solution_bg.jpg");
-    background-size: 100%;
+    /* background-image: url("../img/solution_bg.jpg");
+    background-size: 110%;
     background-position: center;
-    background-attachment: fixed;
-
+    background-attachment: fixed; */
+    background-color: $colorTwo;
     .container {
-        padding: 55px 0;
+        padding: 25px 0 55px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -474,14 +525,16 @@ $headerFooter: #24282c;
         & span {
             text-transform: lowercase;
             font-size: 17px;
-            color: #4b4b4c;
+            color: $colorFour;
         }
     }
 }
 
 .services {
-    background-color: $colorFour;
-
+    background-image: url("../img/solution_bg.jpg");
+    background-size: 110%;
+    background-position: center;
+    background-attachment: fixed;
     .container {
         padding: 90px 0 120px;
     }
@@ -625,6 +678,10 @@ $headerFooter: #24282c;
 }
 
 .painting {
+    background-image: url("../img/solution_bg.jpg");
+    background-size: 110%;
+    background-position: center;
+    background-attachment: fixed;
     .container {
         display: flex;
         padding: 100px 0;
@@ -729,7 +786,7 @@ address {
     width: 55px;
     height: 55px;
     border: 3px solid $colorOne;
-    background-image: url("../img/arrow_to_top.svg");
+    background-image: url("../img/arrow_to_top.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 25px;
@@ -1165,9 +1222,8 @@ a.contacts {
     min-width: 250px;
     padding: 10px 20px 15px;
     position: fixed;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 116px;
+    left: 20%;
     background-color: $headerFooter;
     border: 1px solid $colorOne;
     display: none;
@@ -1186,6 +1242,7 @@ a.contacts {
     }
 
     &__btn {
+        margin: 0 10px;
         padding: 5px 15px;
         background-color: $colorOne;
         color: $colorTwo;
@@ -1254,3 +1311,4 @@ a.contacts {
 
     }
 }
+

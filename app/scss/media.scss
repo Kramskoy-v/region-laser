@@ -1,3 +1,22 @@
+@media(min-width: 769px) {
+    .menu {
+        &__item {
+
+            &:hover .menu {
+                &__link {
+                    color: $colorFour;
+                }
+            }
+
+            &:hover .sub-menu {
+                &__wrap {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1200px) {
 
     .header .container,
@@ -35,6 +54,32 @@
         }
     }
 
+    .video {
+        video {
+            display: none;
+        }
+
+        .container {
+            background-image: url("../img/video_bg.jpg");
+            background-repeat: no-repeat;
+            background-position: 65% 50%;
+            background-size: cover;
+            height: calc(100vh - 80px);
+        }
+
+        &__link {
+            width: 35px;
+        }
+    }
+
+   /*  .solution {
+        background-size: 150%;
+    } */
+
+    .services, .painting {
+        background-size: 150%;
+    }
+
     .features .container,
     .light-work__wrap,
     .extras__wrap,
@@ -45,7 +90,7 @@
 
     .features {
         &__item {
-            margin: 30px 40px 0;
+            margin: 30px 45px 0;
         }
     }
 
@@ -99,6 +144,16 @@
     .input-text {
         width: 80%;
     }
+
+    .contacts-block {
+        .container {
+            padding: 20px 0;
+        }
+
+        .contacts {
+            margin-top: 15px;
+        }
+    }
 }
 
 @media(max-width: 768px) {
@@ -107,6 +162,7 @@
             width: 100%;
             display: flex;
             justify-content: end;
+            padding-right: 15px;
 
         }
 
@@ -114,6 +170,7 @@
             border: none;
             width: 100%;
             justify-content: center;
+
             .hidden {
                 display: none;
             }
@@ -131,7 +188,7 @@
     .menu {
         position: fixed;
         z-index: 2;
-        background-color: rgba(26, 26, 26, 0.99);
+        background-color: $headerFooter;
         top: -120%;
         left: 0;
         width: 100%;
@@ -139,17 +196,32 @@
         transition: 0.7s;
 
         &--active {
-            top: 0;
+            top: 80px;
             transition: 0.7s;
+
         }
 
         &__list {
             margin-top: 30px;
             flex-direction: column;
+            align-items: center;
         }
 
         &__item {
             margin-left: 0;
+
+        }
+
+        .hidden-item {
+            overflow: hidden;
+            height: 85px;
+            position: relative;
+        }
+
+        .hidden-item.active {
+            overflow: visible;
+            transition: 1s;
+            height: min-content;
         }
 
         &__link {
@@ -162,8 +234,24 @@
     }
 
     .sub-menu {
+
         &__arrow.hidden {
             display: none;
+        }
+
+        &__wrap {
+            width: 100%;
+            position: relative;
+            opacity: 0;
+            transition: .6s;
+            top: auto;
+            bottom: -100vh;
+        }
+
+        &-mobile.active {
+            top: 20px !important;
+            visibility: visible;
+            opacity: 1;
         }
 
         &__wrap.hidden {
@@ -171,7 +259,7 @@
         }
 
         &__item {
-            width: 50%;
+            width: 100%;
         }
     }
 
@@ -185,20 +273,39 @@
 
     .video {
         &__wrap {
-            height: auto;
-            padding-top: 40px;
+            padding-top: 0;
+        }
+    }
+
+    .top-page {
+        .container {
+            padding: 45px 0 30px;
         }
     }
 
     .page {
-        &__subtitle {
-            margin: 40px 20px 0;
+        &__subtitle.laser {
+            display: none;
         }
     }
 
     .features .container {
-        padding-top: 0;
+        padding: 0 0 20px;
     }
+
+    .features {
+        .container {
+            .swiper {
+                display: block;
+            }
+
+            .features__item {
+                display: none;
+            }
+        }
+    }
+
+
 
     .header .container,
     .features .container,
@@ -249,7 +356,9 @@
     .contacts.form-page {
         padding-top: 40px;
     }
-
+    .popup {
+        top: 95px;
+    }
 }
 
 @media(max-width: 576px) {
@@ -257,6 +366,10 @@
         &__link {
             display: none;
         }
+    }
+
+    .menu--active {
+        top: 65px;
     }
 
     .sub-menu {
@@ -277,24 +390,47 @@
         }
     }
 
+   /*  .solution {
+        background-size: 250%;
+    } */
+
+    .services, .painting {
+        background-size: 250%;
+    }
+
     .card {
         &__item {
             flex-direction: column;
+            position: relative;
+            padding: 0;
         }
 
         &__image {
             margin: 0 auto;
-            width: 90%;
+            width: 100%;
+
+        }
+
+        &__img {
+            height: 100%;
         }
 
         &__info {
-            width: 100%;
-            padding: 20px 0 0;
+            width: 90%;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(255, 200, 0, 0.8);
+        }
+
+        &__desc {
+            display: none;
         }
     }
 
     .services .container {
-        padding: 30px 10px;
+        padding: 30px 0;
     }
 
     .painting {
@@ -341,6 +477,13 @@
     .contacts-block .contacts {
         align-items: center;
         margin-top: 0;
+        padding-top: 0;
+    }
+
+    .map {
+        .container {
+            height: 33vh;
+        }
     }
 
     .top-page .container {
@@ -415,7 +558,10 @@
             padding: 30px 10px;
         }
     }
-
+    .popup {
+        left: 10%;
+        top: 73px;
+    }
 }
 
 @media(max-width: 400px) {
@@ -423,5 +569,27 @@
         &__title {
             font-size: 30px;
         }
+    }
+    .popup {
+        left: 0;
+    
+    }
+}
+
+
+@media(max-width: 375px) {
+    .video {
+        .button {
+            margin-top: 20px;
+        }
+
+        .page {
+            &__subtitle {
+                margin-top: 30px;
+            }
+        }
+    }
+    .location {
+        margin: 0 10px;
     }
 }

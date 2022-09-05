@@ -2,18 +2,32 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 	//Hamburger menu
-	let hamburger = document.querySelector('.hamburger'),
-		mobileMenu = document.querySelector('.menu');
+	const hamburger = document.querySelector('.hamburger'),
+		mobileMenu = document.querySelector('.menu'),
+		linkMobile = document.querySelector('.menu__link-mobile'),
+		subMenuMobile = document.querySelector('.sub-menu-mobile'),
+		hiddenItem = document.querySelector('.hidden-item');
+
+	linkMobile.addEventListener('click', function () {
+		hiddenItem.classList.toggle('active');
+		subMenuMobile.classList.toggle('active');
+	});
 
 	hamburger.addEventListener('click', function () {
 		hamburger.classList.toggle('hamburger--active');
 		mobileMenu.classList.toggle('menu--active');
+		if (subMenuMobile.classList.contains('active') || hiddenItem.classList.contains('active')) {
+			subMenuMobile.classList.remove('active');
+			hiddenItem.classList.remove('active');
+		}
+
 	});
+
 
 	// arrow back to top	
 	function trackScroll() {
-		let scrolled = window.pageYOffset;
-		let coords = document.documentElement.clientHeight;
+		const scrolled = window.pageYOffset,
+			coords = document.documentElement.clientHeight;
 
 		if (scrolled > coords) {
 			goTopBtn.classList.add('back_to_top-show');
@@ -30,14 +44,14 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
-	let goTopBtn = document.querySelector('.back_to_top');
+	const goTopBtn = document.querySelector('.back_to_top');
 
 	window.addEventListener('scroll', trackScroll);
 	goTopBtn.addEventListener('click', backToTop);
 
 
 	// header sticky
-	let logo = document.querySelector('.logo'),
+	const logo = document.querySelector('.logo'),
 		elementHidden = document.querySelector('.header__contact'),
 		submenu = document.querySelectorAll('.sub-menu__wrap');
 
@@ -46,7 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			elementHidden.classList.add('hidden');
 			logo.classList.add('scale');
 			submenu.forEach((el) => {
-				el.style.top = '70px';
+				el.style.top = '69px';
 			});
 		} else {
 			elementHidden.classList.remove('hidden');
@@ -60,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	// input type=file
 
-	let inputs = document.querySelectorAll('.input__file');
+	const inputs = document.querySelectorAll('.input__file');
 	Array.prototype.forEach.call(inputs, function (input) {
 		let label = input.nextElementSibling,
 			labelVal = label.querySelector('.input__file-button-text').innerText;
@@ -101,8 +115,11 @@ window.addEventListener('DOMContentLoaded', () => {
 		req.send(new FormData(event.target));
 	};
 
-	const storageType = sessionStorage;
-	const consentPropertyType = 'location';
+
+	//geo location
+
+	const storageType = sessionStorage,
+		consentPropertyType = 'location';
 
 	const shouldShowPopup = () => !storageType.getItem(consentPropertyType);
 	const saveToStorage = () => storageType.setItem(consentPropertyType, true);
@@ -129,5 +146,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });
 
-
-
+// main slider
+let swiper;
+if (document.querySelector('.mySwiper')) {
+	swiper = new Swiper(".mySwiper", {
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+		},
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		loop: true,
+	});
+};

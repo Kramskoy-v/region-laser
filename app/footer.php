@@ -27,7 +27,7 @@
         <span>Москва</span>?
     </h3>
     <div class="popup__wrap">
-        <div class="popup__btn" data-confirm>Да</div>
+        <div class="popup__btn" data-confirm>Да, верно</div>
         <div class="popup__btn" data-change>Изменить</div>
     </div>
 </div>

@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регион лазер</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <?php include 'header.php';?>
-    
-       <main>
+    <?php include 'header.php'; ?>
+
+    <main>
         <section class="video">
             <div class="container">
                 <div class="video__wrap">
@@ -23,12 +24,14 @@
                         сроки<br>
                         Работаем с Юридическими и Физическими лицами</h2>
                     <a href="page-form.php" class="button">Оформить заказ</a>
-                    <div class="video__triangle"></div>
+                    <a href="#features" class="video__link">
+                        <img class="video__arrow" src="img/arrow_bottom.png" alt="стрелка вниз">
+                    </a>
                 </div>
                 <video src="video/main.mp4" type="video/mp4" muted autoplay loop> </video>
             </div>
         </section>
-        <section class="features">
+        <section class="features" id="features">
             <div class="container">
                 <div class="features__item">
                     <div class="features__image">
@@ -60,6 +63,43 @@
                     </div>
                     <p class="features__desc">Доставка в любой регион РФ</p>
                 </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="features__image">
+                                <img src="img/manufacture.png" alt="" class="features__img">
+                            </div>
+                            <p class="features__desc">Собственное производство</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="features__image">
+                                <img src="img/consult.png" alt="" class="features__img">
+                            </div>
+                            <p class="features__desc">Подробная консультация со специалистами</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="features__image">
+                                <img src="img/t-doc.png" alt="" class="features__img">
+                            </div>
+                            <p class="features__desc">Разработка технической документации</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="features__image">
+                                <img src="img/watching.png" alt="" class="features__img">
+                            </div>
+                            <p class="features__desc">Онлайн отслеживание статуса заказа</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="features__image">
+                                <img src="img/shipping.png" alt="" class="features__img">
+                            </div>
+                            <p class="features__desc">Доставка в любой регион РФ</p>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </div>
         </section>
         <section class="solution">
@@ -70,7 +110,7 @@
                 <div class="button">Подробнее</div>
             </div>
         </section>
-        <section class="services">
+        <section class="services" id="services_block">
             <div class="container">
                 <h2 class="services__title">Наши услуги</h2>
                 <div class="card__wrap">
@@ -155,8 +195,8 @@
         </section>
     </main>
 
-    <?php include 'footer.php'?>
-
+    <?php include 'footer.php' ?>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
