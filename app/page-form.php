@@ -79,7 +79,7 @@
                         <div class="checkbox">
                             <input id="usercheck" checked required type="checkbox" name="usercheck" class="checkbox__input">
                             <label for="usercheck" class="checkbox__label"><span>Я даю своё согласие на обработку
-                                    персональных данных в соответствии с <a href="#" class="checkbox__link" target="blank">Условиями</a>*</span>
+                                    персональных данных в соответствии с <a href="page-privacyPolicy.php" class="checkbox__link" target="blank">Условиями</a>*</span>
                             </label>
                         </div>
                     </div>

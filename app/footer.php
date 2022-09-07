@@ -44,7 +44,7 @@
                 <a href="../lpk/index.php" class="modal__link">Липецк</a>
             </li>
             <li class="modal__city">
-                <a href="#" class="modal__link">Другой регион</a>
+                <a href="../all/index.php" class="modal__link">Другой регион</a>
             </li>
         </ul>
     </div>

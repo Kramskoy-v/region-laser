@@ -425,7 +425,7 @@ li {
           align-items: center;
 }
 .header__contact {
-  padding: 15px 0;
+  padding: 15px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -474,7 +474,7 @@ li {
 
 .sub-location {
   visibility: hidden;
-  min-width: 150px;
+  min-width: 160px;
   padding-bottom: 15px;
   position: absolute;
   left: -18px;
@@ -1241,7 +1241,7 @@ address {
 }
 
 .products .container {
-  padding: 60px 0 70px;
+  padding: 75px 0 70px;
 }
 .products__title {
   font-size: 21px;
@@ -1498,11 +1498,14 @@ a.contacts__info.vk {
 }
 
 .popup {
-  min-width: 250px;
+  min-width: 300px;
   padding: 10px 20px 15px;
   position: fixed;
   top: 116px;
-  left: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   background-color: #24282c;
   border: 1px solid #ffc700;
   display: none;
@@ -1910,6 +1913,11 @@ a.contacts__info.vk {
     right: 0;
     background-color: rgba(255, 200, 0, 0.8);
   }
+  .card__subtitle {
+    -moz-text-align-last: right;
+         text-align-last: right;
+    text-align: right;
+  }
   .card__desc {
     display: none;
   }
@@ -2027,16 +2035,12 @@ a.contacts__info.vk {
     padding: 30px 10px;
   }
   .popup {
-    left: 10%;
     top: 73px;
   }
 }
 @media (max-width: 400px) {
   .extras__title {
     font-size: 30px;
-  }
-  .popup {
-    left: 0;
   }
 }
 @media (max-width: 375px) {

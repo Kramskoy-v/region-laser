@@ -15,7 +15,7 @@
                                     <a href="../lpk/index.php" class="sub-location__link">Липецк</a>
                                 </li>
                                 <li class="sub-location__city">
-                                    <a href="#" class="sub-location__link">Другой регион</a>
+                                    <a href="../all/index.php" class="sub-location__link">Другой регион</a>
                                 </li>
                             </ul>
                         </li>
@@ -33,22 +33,19 @@
                                         <a href="page-laser.php" class="sub-menu__link">Лазерная резка</a>
                                     </li>
                                     <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Плазменная резка</a>
+                                        <a href="page-plasma.php" class="sub-menu__link">Плазменная резка</a>
                                     </li>
                                     <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Гибка металла</a>
+                                        <a href="page-flexible.php" class="sub-menu__link">Гибка металла</a>
                                     </li>
                                     <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Сварка металла</a>
+                                        <a href="page-welding.php" class="sub-menu__link">Сварка металла</a>
                                     </li>
                                     <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Порошковая покраска</a>
+                                        <a href="page-painting.php" class="sub-menu__link">Порошковая покраска</a>
                                     </li>
                                     <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Изг. металлоконструкции</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Разработка документации</a>
+                                        <a href="page-docs.php" class="sub-menu__link">Разработка документации</a>
                                     </li>
                                 </ul>
                             </div>
@@ -58,25 +55,19 @@
                             <div class="sub-menu__wrap hidden">
                                 <ul class="sub-menu__list">
                                     <li class="sub-menu__item">
-                                        <a href="#" class="sub-menu__link">Изготовление кронштейнов</a>
+                                        <a href="page-containers.php" class="sub-menu__link">Емкости</a>
                                     </li>
                                     <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Металлические фланцы</a>
+                                        <a href="page-fenders.php" class="sub-menu__link">Отбойники</a>
                                     </li>
                                     <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Металлические емкости</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">Худ. изделия</a>
-                                    </li>
-                                    <li class="sub-menu__item">
-                                        <a href="" class="sub-menu__link">По образцу</a>
+                                        <a href="page-plates.php" class="sub-menu__link">Металлические пластины</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">О нас</a>
+                            <a href="page-about.php" class="menu__link">О нас</a>
                         </li>
                         <li class="menu__item">
                             <a href="page-contacts.php" class="menu__link">Контакты</a>

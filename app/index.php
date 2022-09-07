@@ -107,7 +107,7 @@
                 <h2 class="solution__title">Напишите нам и мы поможем решить любую задачу<br>
                     <span>изготовим как простые детали, так и сложные металлоконструкции</span>
                 </h2>
-                <div class="button">Подробнее</div>
+                <a href="page-form.php" class="button">Подробнее</a>
             </div>
         </section>
         <section class="services" id="services_block">
@@ -123,7 +123,7 @@
                             <p class="card__desc">Размер рабочего поля 2000х3000мм Толщины от 0,5мм до 16мм</p>
                         </div>
                     </a>
-                    <a href="#" class="card__item">
+                    <a href="page-plasma.php" class="card__item">
                         <div class="card__image">
                             <img src="img/services_plasma.jpg" alt="" class="card__img">
                         </div>
@@ -132,7 +132,7 @@
                             <p class="card__desc">Размер рабочего поля 1500х3000мм Толщины от 5мм до 40мм</p>
                         </div>
                     </a>
-                    <a href="#" class="card__item">
+                    <a href="page-flexible.php" class="card__item">
                         <div class="card__image">
                             <img src="img/services_bend.jpg" alt="" class="card__img">
                         </div>
@@ -141,7 +141,7 @@
                             <p class="card__desc">Современное высокоточное ЧПУ оборудование</p>
                         </div>
                     </a>
-                    <a href="#" class="card__item">
+                    <a href="page-welding.php" class="card__item">
                         <div class="card__image">
                             <img src="img/services_welding.jpg" alt="" class="card__img">
                         </div>
@@ -189,7 +189,7 @@
                     <h2 class="painting__title">Порошковая покраска</h2>
                     <p class="painting__desc">Мы устанавливаем разумные цены
                         на все виды работ. Напишите нам, если у вас появились вопросы!</p>
-                    <a href="#" class="painting__link button">Подробнее</a>
+                    <a href="page-painting.php" class="painting__link button">Подробнее</a>
                 </div>
             </div>
         </section>

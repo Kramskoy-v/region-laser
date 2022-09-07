@@ -14,7 +14,7 @@
 
     <?php include 'header.php'; ?>
 
-    <main>
+    <main class="page-laser">
         <section class="top-page">
             <div class="container">
                 <h1 class="page__title">ЛАЗЕРНАЯ РЕЗКА ЛИСТОВОГО МЕТАЛЛА</h1>

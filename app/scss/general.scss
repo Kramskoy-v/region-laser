@@ -98,7 +98,7 @@ $headerFooter: #24282c;
     }
 
     &__contact {
-        padding: 15px 0;
+        padding: 15px 10px;
         display: flex;
         justify-content: space-between;
         height: 50%;
@@ -157,7 +157,7 @@ $headerFooter: #24282c;
 
 .sub-location {
     visibility: hidden;
-    min-width: 150px;
+    min-width: 160px;
     padding-bottom: 15px;
     position: absolute;
     left: -18px;
@@ -947,7 +947,7 @@ address {
 
 .products {
     .container {
-        padding: 60px 0 70px;
+        padding: 75px 0 70px;
     }
 
     &__title {
@@ -1219,11 +1219,12 @@ a.contacts {
 }
 
 .popup {
-    min-width: 250px;
+    min-width: 300px;
     padding: 10px 20px 15px;
     position: fixed;
     top: 116px;
-    left: 20%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: $headerFooter;
     border: 1px solid $colorOne;
     display: none;
