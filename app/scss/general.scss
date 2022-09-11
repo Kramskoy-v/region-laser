@@ -147,7 +147,7 @@ $headerFooter: #24282c;
 
             span {
                 font-size: 1.5em;
-             transform: translate(5px, 5px) rotate(90deg);
+                transform: translate(5px, 5px) rotate(90deg);
                 display: inline-block;
             }
 
@@ -191,6 +191,7 @@ $headerFooter: #24282c;
     position: relative;
     z-index: 5;
     background-color: $headerFooter;
+
     &__img {
         width: 100%;
         object-fit: contain;
@@ -220,6 +221,7 @@ $headerFooter: #24282c;
         &:first-child {
             margin-left: 0;
         }
+
         &:hover .menu {
             &__link {
                 color: $colorFour;
@@ -232,7 +234,7 @@ $headerFooter: #24282c;
             }
         }
     }
- 
+
     &__link {
         color: $colorOne;
         font-size: 18px;
@@ -243,7 +245,7 @@ $headerFooter: #24282c;
             transform: translate(5px, 5px) rotate(90deg);
             display: inline-block;
         }
-       
+
     }
 }
 
@@ -258,7 +260,7 @@ $headerFooter: #24282c;
         z-index: 2;
         background-color: $headerFooter;
     }
-    
+
     &__list {
         max-width: 1080px;
         margin: 0 auto;
@@ -359,6 +361,7 @@ $headerFooter: #24282c;
         position: relative;
         z-index: 1;
     }
+
     &__link {
         display: block;
         width: 50px;
@@ -367,9 +370,10 @@ $headerFooter: #24282c;
         position: absolute;
         bottom: 20px;
     }
+
     &__arrow {
-      object-fit: contain;
-      width: 100%;
+        object-fit: contain;
+        width: 100%;
     }
 
     .page {
@@ -416,6 +420,7 @@ $headerFooter: #24282c;
     text-align: center;
     cursor: pointer;
     transition: .2s;
+    display: block;
 
     &:hover {
         background-color: #333438;
@@ -440,32 +445,6 @@ $headerFooter: #24282c;
             padding: 60px 0;
         }
 
-        .swiper-button-next,
-        .swiper-button-prev {
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            width: 20px;
-        }
-
-        .swiper-button-next {
-            background-image: url('../img/arrow_next.png');
-        }
-
-        .swiper-button-prev {
-            background-image: url('../img/arrow_prev.png');
-        }
-
-        .swiper-button-next:after,
-        .swiper-rtl .swiper-button-prev:after,
-        .swiper-button-prev:after,
-        .swiper-rtl .swiper-button-next:after {
-            content: none;
-        }
-
-        .swiper-pagination-bullet-active {
-            background-color: $colorOne;
-        }
     }
 
     &__item {
@@ -498,12 +477,40 @@ $headerFooter: #24282c;
     }
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20px;
+}
+
+.swiper-button-next {
+    background-image: url('../img/arrow_next.png');
+}
+
+.swiper-button-prev {
+    background-image: url('../img/arrow_prev.png');
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    content: none;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $colorOne;
+}
+
 .solution {
     /* background-image: url("../img/solution_bg.jpg");
     background-size: 110%;
     background-position: center;
     background-attachment: fixed; */
     background-color: $colorTwo;
+
     .container {
         padding: 25px 0 55px;
         display: flex;
@@ -535,6 +542,7 @@ $headerFooter: #24282c;
     background-size: 110%;
     background-position: center;
     background-attachment: fixed;
+
     .container {
         padding: 90px 0 120px;
     }
@@ -682,6 +690,7 @@ $headerFooter: #24282c;
     background-size: 110%;
     background-position: center;
     background-attachment: fixed;
+
     .container {
         display: flex;
         padding: 100px 0;
@@ -1035,6 +1044,7 @@ address {
         cursor: pointer;
         transition: .2s;
 
+
         &:hover {
             background-color: #333438;
             color: $colorOne;
@@ -1218,6 +1228,42 @@ a.contacts {
     }
 }
 
+
+.page-product {
+    .product-info {
+        background-color: $colorFour;
+
+        .container {
+            padding: 45px 0;
+
+            .info-block {
+                &__card{
+                    max-width: 260px;
+                }
+            }
+        }
+
+    }
+
+    .light-work {
+        .container {
+            padding: 40px 0;
+        }
+
+        &__wrap {
+            padding: 0;
+        }
+    }
+
+    .feed-form {
+        &__row {
+            &:nth-child(3) {
+                justify-content: end;
+            }
+        }
+    }
+}
+
 .popup {
     min-width: 300px;
     padding: 10px 20px 15px;
@@ -1312,4 +1358,3 @@ a.contacts {
 
     }
 }
-

@@ -129,7 +129,7 @@
                 <div class="card__wrap">
                     <div class="card__item">
                         <div class="card__image">
-                            <img src="img/laser_products_1.jpg" alt="" class="card__img">
+                            <img src="img/products_container.jpg" alt="" class="card__img">
                         </div>
                         <div class="card__info">
                             <h3 class="card__subtitle">Ёмкости металлические</h3>
@@ -158,7 +158,7 @@
                     </div>
                     <div class="card__item">
                         <div class="card__image">
-                            <img src="img/laser_products_4.jpg" alt="" class="card__img">
+                            <img src="img/products_fenders.jpg" alt="" class="card__img">
                         </div>
                         <div class="card__info">
                             <h3 class="card__subtitle">Отбойники</h3>

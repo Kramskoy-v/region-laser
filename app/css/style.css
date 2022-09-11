@@ -731,6 +731,7 @@ li {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+  display: block;
 }
 .button:hover {
   background-color: #333438;
@@ -757,28 +758,6 @@ li {
 .features .container .swiper {
   display: none;
   padding: 60px 0;
-}
-.features .container .swiper-button-next,
-.features .container .swiper-button-prev {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 20px;
-}
-.features .container .swiper-button-next {
-  background-image: url("../img/arrow_next.png");
-}
-.features .container .swiper-button-prev {
-  background-image: url("../img/arrow_prev.png");
-}
-.features .container .swiper-button-next:after,
-.features .container .swiper-rtl .swiper-button-prev:after,
-.features .container .swiper-button-prev:after,
-.features .container .swiper-rtl .swiper-button-next:after {
-  content: none;
-}
-.features .container .swiper-pagination-bullet-active {
-  background-color: #ffc700;
 }
 .features__item {
   max-width: 150px;
@@ -808,6 +787,33 @@ li {
   color: #ffffff;
   text-align: center;
   line-height: 1.3;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 20px;
+}
+
+.swiper-button-next {
+  background-image: url("../img/arrow_next.png");
+}
+
+.swiper-button-prev {
+  background-image: url("../img/arrow_prev.png");
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: none;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffc700;
 }
 
 .solution {
@@ -1495,6 +1501,27 @@ a.contacts__info.vk {
 .map .container {
   max-width: 1920px;
   height: 50vh;
+}
+
+.page-product .product-info {
+  background-color: #c3c3c3;
+}
+.page-product .product-info .container {
+  padding: 45px 0;
+}
+.page-product .product-info .container .info-block__card {
+  max-width: 260px;
+}
+.page-product .light-work .container {
+  padding: 40px 0;
+}
+.page-product .light-work__wrap {
+  padding: 0;
+}
+.page-product .feed-form__row:nth-child(3) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 .popup {

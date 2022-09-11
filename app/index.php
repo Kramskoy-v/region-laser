@@ -63,7 +63,7 @@
                     </div>
                     <p class="features__desc">Доставка в любой регион РФ</p>
                 </div>
-                <div class="swiper mySwiper">
+                <div class="swiper mySwiper mainSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="features__image">

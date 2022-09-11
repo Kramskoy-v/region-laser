@@ -148,8 +148,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // main slider
 let swiper;
-if (document.querySelector('.mySwiper')) {
-	swiper = new Swiper(".mySwiper", {
+if (document.querySelector('.mainSwiper')) {
+	swiper = new Swiper(".mainSwiper", {
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
@@ -160,6 +160,36 @@ if (document.querySelector('.mySwiper')) {
 		autoplay: {
 			delay: 2500,
 			disableOnInteraction: false,
+		},
+		loop: true,
+	});
+};
+
+let swiperProduct;
+if (document.querySelector('.swiperProduct')) {
+	swiperProduct = new Swiper(".swiperProduct", {
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+		},
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		spaceBetween: 40,
+		slidesPerView: 1,
+		breakpoints: {
+			// when window width is >= 768px
+			568: {
+			  slidesPerView: 2,
+			},
+			// when window width is >= 1200px
+			1200: {
+			  slidesPerView: 3,
+			},
 		},
 		loop: true,
 	});

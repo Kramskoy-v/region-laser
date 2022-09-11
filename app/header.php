@@ -51,7 +51,7 @@
                             </div>
                         </li>
                         <li class="menu__item">
-                            <span  class="menu__link">Продукция <span class="sub-menu__arrow hidden">&rsaquo;</span></span>
+                        <a href="page-products.php" class="menu__link">Продукция <span class="sub-menu__arrow hidden">&rsaquo;</span></a>
                             <div class="sub-menu__wrap hidden">
                                 <ul class="sub-menu__list">
                                     <li class="sub-menu__item">
