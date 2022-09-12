@@ -139,7 +139,7 @@
                     </div>
                     <div class="card__item">
                         <div class="card__image">
-                            <img src="img/laser_products_2.jpg" alt="" class="card__img">
+                            <img src="img/products_plates.jpg" alt="" class="card__img">
                         </div>
                         <div class="card__info">
                             <h3 class="card__subtitle">Фланцы, пластины</h3>
@@ -177,7 +177,7 @@
                     </div>
                     <div class="card__item">
                         <div class="card__image">
-                            <img src="img/laser_products_6.jpg" alt="" class="card__img">
+                            <img src="img/products_sample.jpg" alt="" class="card__img">
                         </div>
                         <div class="card__info">
                             <h3 class="card__subtitle">Изготовление по образцу</h3>

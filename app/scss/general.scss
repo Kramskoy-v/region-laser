@@ -816,6 +816,8 @@ address {
 }
 
 .top-page {
+    background-color: $headerFooter;
+
     .container {
         max-width: 1920px;
         padding: 125px 0 100px;
@@ -1237,7 +1239,7 @@ a.contacts {
             padding: 45px 0;
 
             .info-block {
-                &__card{
+                &__card {
                     max-width: 260px;
                 }
             }
@@ -1262,6 +1264,106 @@ a.contacts {
             }
         }
     }
+}
+
+.page-about {
+    .painting {
+        .container {
+            max-width: 1920px;
+        }
+       &__info {
+        padding: 0 40px;
+       }
+    }
+
+    .tabs {
+        background-color: $colorFive;
+
+        .container {
+            padding: 60px 0;
+        }
+    }
+
+    .tabscontainer {
+
+        &__top {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        &__button {
+            background-color: $colorFive;
+            &:nth-child(2) {
+                margin: 0 10px;
+            }
+
+            &.active {
+                background-color: $colorTwo;
+                color: $colorOne;
+            }
+
+            &:hover {
+                background-color: $colorTwo;
+            }
+
+        }
+
+        &__bottom {
+            padding: 40px 0 10px;
+        }
+
+        &__content {
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.4;
+
+            &.hide {
+                display: none;
+            }
+        }
+    }
+
+    .youtube {
+        .container {
+           max-width: 1920px; 
+        }
+    }
+
+    .reviews {
+        background-image: url("../img/solution_bg.jpg");
+        background-size: 110%;
+        background-position: center;
+        background-attachment: fixed;
+    
+        .container {
+            padding: 80px 0;
+            max-width: 1920px;
+            .swiper-slide {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        &__title {
+            margin: 0 auto 0 0;
+            padding: 0 0 60px 0;
+            width: 50%;
+            font-size: 40px;
+            font-weight: 500;
+            text-align: right;
+            text-transform: uppercase;
+        }
+       
+        &__desc {
+            padding: 0 20px;
+            font-size: 18px;
+            line-height: 1.4;
+            width: 50%;
+        }
+    }
+
+  
+ 
 }
 
 .popup {

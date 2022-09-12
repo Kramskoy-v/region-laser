@@ -26,9 +26,14 @@
     .footer .container,
     .info-block .container,
     .info-form .container,
-    .breadcrumbs {
+    .breadcrumbs,
+    .page-about .tabs .container {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .page-about .reviews .container {
+        padding: 35px 20px;
     }
 
     .menu {
@@ -72,11 +77,8 @@
         }
     }
 
-   /*  .solution {
-        background-size: 150%;
-    } */
-
-    .services, .painting {
+    .services,
+    .painting {
         background-size: 150%;
     }
 
@@ -152,6 +154,14 @@
 
         .contacts {
             margin-top: 15px;
+        }
+    }
+
+    .page-about {
+        .painting {
+            .container {
+                padding: 70px 0;
+            }
         }
     }
 }
@@ -356,9 +366,58 @@
     .contacts.form-page {
         padding-top: 40px;
     }
+
     .popup {
         top: 95px;
     }
+
+    .page-about {
+        .painting {
+            .container {
+                padding: 50px 0;
+            }
+        }
+
+        .reviews {
+            .container {
+                padding-right: 0;
+                padding-left: 0;
+
+                .swiper {
+                    padding-top: 30px;
+                }
+
+                .swiper-slide {
+                    flex-direction: column;
+
+                    .painting__image {
+                        width: 100%;
+                    }
+                }
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    display: none;
+                }
+
+            }
+
+            &__title {
+                width: 100%;
+                padding-right: 10px;
+                font-size: 26px;
+
+            }
+
+            &__desc {
+                width: 100%;
+            }
+        }
+    }
+
+
+
+
 }
 
 @media(max-width: 576px) {
@@ -390,11 +449,9 @@
         }
     }
 
-   /*  .solution {
-        background-size: 250%;
-    } */
 
-    .services, .painting {
+    .services,
+    .painting {
         background-size: 250%;
     }
 
@@ -423,10 +480,12 @@
             right: 0;
             background-color: rgba(255, 200, 0, 0.8);
         }
-       &__subtitle {
-        text-align-last: right;
-        text-align: right;
-       }
+
+        &__subtitle {
+            text-align-last: right;
+            text-align: right;
+        }
+
         &__desc {
             display: none;
         }
@@ -561,8 +620,23 @@
             padding: 30px 10px;
         }
     }
+
     .popup {
         top: 73px;
+    }
+
+    .page-about {
+        .painting {
+            .container {
+                padding: 20px 0;
+            }
+        }
+
+        .tabs {
+            .container {
+                padding: 30px 10px;
+            }
+        }
     }
 }
 
@@ -572,7 +646,20 @@
             font-size: 30px;
         }
     }
-    
+
+    .page-about .tabscontainer {
+        &__top {
+            flex-direction: column;
+        }
+
+        &__button {
+            margin: 0 auto;
+
+            &:nth-child(2) {
+                margin: 20px auto;
+            }
+        }
+    }
 }
 
 
@@ -588,6 +675,7 @@
             }
         }
     }
+
     .location {
         margin: 0 10px;
     }
