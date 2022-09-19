@@ -16,9 +16,9 @@
     <?php include 'header.php'; ?>
 <main class="page-privacy">
 <section class="top-page">
-            <div class="container">
+            <div class="container"  style="background-image:url(img/contacts_page_bg.jpg)">
                 <h1 class="page__title">Политика конфиденциальности</h1>
-                <h2 class="page__subtitle laser"></h2>
+                <h3 class="page__subtitle laser"></h3>
             </div>
 </section>
        <section class="privacy">

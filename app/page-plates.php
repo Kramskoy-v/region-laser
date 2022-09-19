@@ -16,9 +16,9 @@
     <?php include 'header.php'; ?>
     <main class="page-product">
         <section class="top-page">
-            <div class="container">
+            <div class="container"  style="background-image:url(img/contacts_page_bg.jpg)">
                 <h1 class="page__title">Металлические пластины</h1>
-                <h2 class="page__subtitle laser"></h2>
+                <h3 class="page__subtitle laser"></h3>
             </div>
         </section>
         <div class="breadcrumbs">

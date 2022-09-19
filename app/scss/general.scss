@@ -275,6 +275,14 @@ $headerFooter: #24282c;
         &:hover {
             border-color: $colorOne;
 
+            .sub-menu__wrap-second {
+                visibility: visible;
+
+                .sub-menu__link {
+                    color: $colorFour;
+                }
+            }
+
             .sub-menu {
                 &__link {
                     color: $colorOne;
@@ -288,6 +296,33 @@ $headerFooter: #24282c;
         color: $colorFour;
         display: inline-block;
         width: 100%;
+    }
+
+    &__wrap-second {
+        width: 100%;
+        position: absolute;
+        left: 32%;
+        top: 0;
+        transition: .3s;
+        visibility: hidden;
+        z-index: 3;
+        background-color: $headerFooter;
+
+        .sub-menu {
+            &__list {
+                max-width: 1080px;
+                margin: 0;
+                border-color: transparent;
+            }
+
+            &__item {
+                &:hover {
+                    .sub-menu__link {
+                        color: $colorOne;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -505,10 +540,6 @@ $headerFooter: #24282c;
 }
 
 .solution {
-    /* background-image: url("../img/solution_bg.jpg");
-    background-size: 110%;
-    background-position: center;
-    background-attachment: fixed; */
     background-color: $colorTwo;
 
     .container {
@@ -745,6 +776,12 @@ $headerFooter: #24282c;
     margin-top: 50px;
     color: $colorFive;
 
+    .button {
+        &.show {
+            display: none;
+        }
+    }
+
     &__name {
         font-size: 18px;
         font-weight: 500;
@@ -821,7 +858,6 @@ address {
     .container {
         max-width: 1920px;
         padding: 125px 0 100px;
-        background-image: url("../img/laser_page_bg.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -1174,17 +1210,18 @@ address {
     padding-top: 90px;
 }
 
-.contacts-page {
-    .container {
-        background-image: url('../img/contacts_page_bg.jpg');
-    }
-}
 
 .contacts-block {
-    background-color: $colorFour;
+    background-image: url('../img/solution_bg.jpg');
+    background-position: center;
+    background-size: 110%;
+    background-attachment: fixed;
+
 
     .container {
         padding: 70px 0 100px;
+        display: flex;
+        justify-content: space-around;
     }
 
     &__title {
@@ -1195,17 +1232,16 @@ address {
     }
 
     .contacts {
-        margin-top: 40px;
         line-height: 1.2;
 
         &__info {
-            text-align: center;
+            text-align-last: left;
             color: #000000;
         }
 
         &__vk {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             transition: .2s;
 
             &:hover {
@@ -1247,6 +1283,13 @@ a.contacts {
 
     }
 
+    .products {
+        background-image: url("../img/solution_bg.jpg");
+        background-size: 110%;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
     .light-work {
         .container {
             padding: 40px 0;
@@ -1267,13 +1310,30 @@ a.contacts {
 }
 
 .page-about {
+    .page {
+        &__title {
+            span {
+                color: $colorThree;
+            }
+        }
+    }
+
     .painting {
         .container {
             max-width: 1920px;
         }
-       &__info {
-        padding: 0 40px;
-       }
+
+        &__info {
+            padding: 0 40px;
+        }
+
+        &__title {
+            font-size: 35px;
+        }
+
+        &__desc {
+            font-size: 22px;
+        }
     }
 
     .tabs {
@@ -1294,6 +1354,7 @@ a.contacts {
 
         &__button {
             background-color: $colorFive;
+
             &:nth-child(2) {
                 margin: 0 10px;
             }
@@ -1314,19 +1375,38 @@ a.contacts {
         }
 
         &__content {
-            text-align: justify;
-            font-size: 18px;
-            line-height: 1.4;
+            display: flex;
+            justify-content: space-between;
 
             &.hide {
                 display: none;
             }
+
         }
+
+        &__slider {
+            width: 50%;
+
+            .swiper-bg {
+                width: 70%;
+                padding: 0;
+                background-image: url('../img/about_smart_bg.png');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+
+                .swiper-pagination-bullets {
+                    bottom: 30px;
+                }
+            }
+
+        }
+
     }
 
     .youtube {
         .container {
-           max-width: 1920px; 
+            max-width: 1920px;
         }
     }
 
@@ -1335,15 +1415,17 @@ a.contacts {
         background-size: 110%;
         background-position: center;
         background-attachment: fixed;
-    
+
         .container {
             padding: 80px 0;
             max-width: 1920px;
+
             .swiper-slide {
                 display: flex;
                 justify-content: space-between;
             }
         }
+
         &__title {
             margin: 0 auto 0 0;
             padding: 0 0 60px 0;
@@ -1353,7 +1435,7 @@ a.contacts {
             text-align: right;
             text-transform: uppercase;
         }
-       
+
         &__desc {
             padding: 0 20px;
             font-size: 18px;
@@ -1362,8 +1444,8 @@ a.contacts {
         }
     }
 
-  
- 
+
+
 }
 
 .popup {

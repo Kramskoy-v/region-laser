@@ -20,9 +20,9 @@
             <div class="container">
                 <div class="video__wrap">
                     <h1 class="page__title">ИЗГОТОВЛЕНИЕ ИЗДЕЛИЙ ИЗ МЕТАЛЛА</h1>
-                    <h2 class="page__subtitle">Комплексная металлообработка на высокоточном оборудовании в разумные
+                    <h3 class="page__subtitle">Комплексная металлообработка на высокоточном оборудовании в разумные
                         сроки<br>
-                        Работаем с Юридическими и Физическими лицами</h2>
+                        Работаем с Юридическими и Физическими лицами</h3>
                     <a href="page-form.php" class="button">Оформить заказ</a>
                     <a href="#features" class="video__link">
                         <img class="video__arrow" src="img/arrow_bottom.png" alt="стрелка вниз">

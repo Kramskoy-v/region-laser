@@ -16,9 +16,9 @@
 
     <main class="page-laser">
         <section class="top-page">
-            <div class="container">
+            <div class="container"  style="background-image:url(img/laser_page_bg.jpg)">
                 <h1 class="page__title">ЛАЗЕРНАЯ РЕЗКА ЛИСТОВОГО МЕТАЛЛА</h1>
-                <h2 class="page__subtitle laser">Размер рабочего поля 2000х3000мм</h2>
+                <h3 class="page__subtitle laser">Размер рабочего поля 2000х3000мм</h3>
             </div>
         </section>
         <div class="breadcrumbs">
@@ -127,7 +127,7 @@
             <div class="container">
                 <h2 class="products__title">Продукция</h2>
                 <div class="card__wrap">
-                    <div class="card__item">
+                    <a href="page-containers.php" class="card__item">
                         <div class="card__image">
                             <img src="img/products_container.jpg" alt="" class="card__img">
                         </div>
@@ -136,8 +136,8 @@
                             <p class="card__desc">Баки для питьевой воды, контейнеры для песка или стружки, тара для
                                 пищевой промышленности</p>
                         </div>
-                    </div>
-                    <div class="card__item">
+                    </a>
+                    <a href="page-plates.php" class="card__item">
                         <div class="card__image">
                             <img src="img/products_plates.jpg" alt="" class="card__img">
                         </div>
@@ -146,8 +146,8 @@
                             <p class="card__desc">Изготовление металлических косынок, переходников, прокладок, уголков
                                 дисков, звездочек, закладных</p>
                         </div>
-                    </div>
-                    <div class="card__item">
+                    </a>
+                    <a href="#" class="card__item">
                         <div class="card__image">
                             <img src="img/laser_products_3.jpg" alt="" class="card__img">
                         </div>
@@ -155,8 +155,8 @@
                             <h3 class="card__subtitle">Корпуса, кожухи</h3>
                             <p class="card__desc">Изготовление различных видов и конфигураций</p>
                         </div>
-                    </div>
-                    <div class="card__item">
+                    </a>
+                    <a href="page-fenders.php" class="card__item">
                         <div class="card__image">
                             <img src="img/products_fenders.jpg" alt="" class="card__img">
                         </div>
@@ -165,8 +165,8 @@
                             <p class="card__desc">Производство защитных ограждений для безопасности на складе и парковке
                             </p>
                         </div>
-                    </div>
-                    <div class="card__item">
+                    </a>
+                    <a href="#" class="card__item">
                         <div class="card__image">
                             <img src="img/laser_products_5.jpg" alt="" class="card__img">
                         </div>
@@ -174,8 +174,8 @@
                             <h3 class="card__subtitle">Металлическая мебель</h3>
                             <p class="card__desc">Декоративные подстолья, производственная мебель, элементы мебели</p>
                         </div>
-                    </div>
-                    <div class="card__item">
+                    </a>
+                    <a href="#" class="card__item">
                         <div class="card__image">
                             <img src="img/products_sample.jpg" alt="" class="card__img">
                         </div>
@@ -184,7 +184,7 @@
                             <p class="card__desc">Аналогичное существующему, по представленному образцу или техническому
                                 заданию</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
