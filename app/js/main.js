@@ -95,19 +95,55 @@ Array.prototype.forEach.call(inputs, function (input) {
 });
 
 
+//Модалка формы если все ОК
+const modalWindow = document.querySelector('.modal-feedback'),
+	modalClose = document.querySelector('.modal-feedback__button');
+
+function modalWindowClose() {
+	modalWindow.classList.remove('active');
+	document.body.style.overflow = '';
+}
+
+modalClose.addEventListener('click', () => {
+	modalWindowClose();
+});
+
+modalWindow.addEventListener('click', (event) => {
+	if (event.target === modalWindow) {
+		modalWindowClose();
+	}
+});
+
+document.addEventListener('keydown', (event) => {
+	if (event.code === 'Escape' && modalWindow.classList.contains('active')) {
+		modalWindowClose();
+	}
+});
+
 // Отправка данных на сервер
+
+
+
+
 function send(event, php) {
-	event.preventDefault ? event.preventDefault() : event.returnValue = false;
-	var req = new XMLHttpRequest();
-	req.open('POST', php, true);
-	req.onload = function () {
-		if (req.status >= 200 && req.status < 400) {
-			// ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
-			alert("Сообщение отправлено");
-			document.querySelector('#form').reset();
-			// Если не удалось связаться с php файлом
-		} else { alert("Ошибка сервера. Номер: " + req.status); }
+	let inputs = document.querySelectorAll('.input-text');
+	if (inputs[1].value.trim() != '' && inputs[2].value.trim() != '') {
+		event.preventDefault ? event.preventDefault() : event.returnValue = false;
+		var req = new XMLHttpRequest();
+		req.open('POST', php, true);
+		req.onload = function () {
+			if (req.status >= 200 && req.status < 400) {
+				// ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+				modalWindow.classList.add('active');
+				document.body.style.overflow = 'hidden'
+				document.querySelector('#form').reset();
+				// Если не удалось связаться с php файлом
+			} else { alert("Ошибка сервера. Номер: " + req.status); }
+		};
+	} else {
+		alert('ХУЙ')
 	};
+
 
 	// Если не удалось отправить запрос. Стоит блок на хостинге
 	req.onerror = function () { alert("Ошибка отправки запроса"); };
@@ -267,3 +303,12 @@ if (document.querySelector('.swiperTabs')) {
 		},
 	});
 };
+
+//маска формы телефона
+
+const inputElement = document.querySelectorAll('.input-text') // ищем наш единственный input
+const maskOptions = { // создаем объект параметров
+  mask: '+{7}(000)000-00-00' // задаем единственный параметр mask
+}
+IMask(inputElement[1], maskOptions) // запускаем плагин с переданными параметрами
+

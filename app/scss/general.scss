@@ -724,7 +724,7 @@ $headerFooter: #24282c;
 
     .container {
         display: flex;
-        padding: 100px 0;
+        padding: 100px 0 75px;
     }
 
     &__image {
@@ -1290,6 +1290,8 @@ a.contacts {
         background-attachment: fixed;
     }
 
+
+
     .light-work {
         .container {
             padding: 40px 0;
@@ -1306,6 +1308,24 @@ a.contacts {
                 justify-content: end;
             }
         }
+    }
+}
+
+.description {
+    .container {
+        padding: 25px 0 100px;
+    }
+
+    background-image: url("../img/solution_bg.jpg");
+    background-size: 110%;
+    background-position: center;
+    background-attachment: fixed;
+
+    &__text {
+        font-size: 18px;
+        color: #535353;
+        line-height: 1.4;
+        text-align: justify;
     }
 }
 
@@ -1443,10 +1463,66 @@ a.contacts {
             width: 50%;
         }
     }
+}
 
+.page-error {
+    background-color: #2e3035;
+    .container {
+        padding: 145px 175px 75px 0;
+        color: $colorFour;
+        position: relative;
+    }
+    &__info {
+       max-width: 350px;
+       margin: 0 0 0 auto;
+       position: relative;
+       z-index: 2;
+       
+    }
 
+    &__number {
+         font-size: 175px;
+      letter-spacing: 26px;
+    }
+
+    &__subtitle {
+        margin-top: 60px;
+        line-height: 1.2;
+
+    }
+    &__img {
+        position: absolute;
+        left: -190px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    
+    &__desc {
+        margin-top: 190px;
+        text-align: center;
+       
+
+    }
+    &__link {
+        color: $colorThree;
+        text-decoration: underline;
+        &:hover {
+            color: $colorOne;
+        }
+    }
 
 }
+
+.error403 {
+    .page-error {
+        &__img {
+            left: 15%;
+            transform: translateY(-65%);
+        }
+    }
+}
+
 
 .popup {
     min-width: 300px;
@@ -1541,4 +1617,58 @@ a.contacts {
         display: block;
 
     }
+}
+
+.modal-feedback {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.52);
+	z-index: 15;
+	&.active {
+		display: block;
+	}
+	&__window {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 70px 25px 50px;
+		max-width: 480px;
+        background-color: $headerFooter;
+        border: 1px solid $colorOne;
+	}
+	&__button {
+        width: 220px;
+        height: 50px;
+        margin: 50px auto 0;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 2.6;
+        background-color: $colorOne;
+        border: 2px solid $colorOne ;
+        color: #333438;
+        text-align: center;
+        cursor: pointer;
+        transition: .2s;
+        display: block;
+		&:hover {
+            background-color: #333438;
+            color: $colorOne;
+		} 
+	}
+	&__title {
+		font-size: 26px;
+		text-align: center;
+        color: $colorThree;
+	}
+	&__desc {
+		margin-top: 20px;
+		font-size: 18px;
+		text-align: center;
+        color: $colorThree;
+	}
 }

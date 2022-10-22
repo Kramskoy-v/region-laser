@@ -59,12 +59,12 @@
                 <h2 class="solution__title">Форма для заявок</h2>
                 <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
                     <div class="feed-form__row">
-                        <input type="text" required placeholder="Имя" name="name" id="" class="input-text">
-                        <input type="tel" required placeholder="Телефон" name="phone" id="" class="input-text">
+                        <input type="text" placeholder="Имя" name="name" id="" class="input-text">
+                        <input type="tel" required placeholder="Телефон" name="phone" class="input-text">
                     </div>
                     <div class="feed-form__row">
-                        <input type="email" placeholder="E-mail" name="email" id="" class="input-text">
-                        <input type="text" required placeholder="Комментарий" name="text" id="" class="input-text">
+                        <input type="email" required placeholder="E-mail" name="email"  class="input-text">
+                        <input type="text"  placeholder="Комментарий" name="text" class="input-text">
                     </div>
                     <div class="feed-form__row">
                         <div class="input__wrapper">
@@ -90,6 +90,7 @@
     <div class="page-form">
         <?php include 'footer.php'; ?>
     </div>
+    <script src="js/imask.js"></script>
     <script src="js/main.js"></script>
 </body>
 

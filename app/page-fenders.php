@@ -16,7 +16,7 @@
     <?php include 'header.php'; ?>
     <main class="page-product">
         <section class="top-page">
-            <div class="container"  style="background-image:url(img/contacts_page_bg.jpg)">
+            <div class="container" style="background-image:url(img/contacts_page_bg.jpg)">
                 <h1 class="page__title">Отбойники</h1>
                 <h3 class="page__subtitle laser"></h3>
             </div>
@@ -35,9 +35,21 @@
                 </div>
                 <div class="painting__info">
                     <h2 class="painting__title">Отбойники</h2>
-                    <p class="painting__desc">Производство защитных ограждений для безопасности на складе и парков</p>
+                    <p class="painting__desc">Компания Регион Лазер в кратчайшие сроки изготовит и доставит на Ваш объект или склад, комплект металлических отбойников в Москве и Московской области.
+                        Существует несколько основных разновидностей защитных отбойных систем для стен и углов помещений от колесной техники. Одна из наиболее часто встречающихся - металлические отбойники, их можно встретить на подземных парковках Москвы и других городов. Как же они работают? - Это элемент .</p>
                     <a href="#form-block" class="button">Заказать</a>
                 </div>
+            </div>
+        </section>
+        <section class="description">
+            <div class="container">
+                <p class="description__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellat et hic eius ipsa consequatur explicabo eligendi modi id, cumque laboriosam placeat, suscipit ut sapiente. Quia totam odio tempore aperiam.
+                    Distinctio, adipisci eligendi! Quis dolorum facere suscipit consequatur quibusdam aliquam a officiis? Quas laboriosam sunt, doloremque nulla illo quibusdam nostrum maxime eum laudantium expedita non quae? Explicabo sit repellendus nisi.
+                    Modi quasi perferendis officiis. Mollitia ad unde corporis culpa doloribus. Quia commodi voluptate tempora voluptatum error, ducimus hic natus quasi adipisci perferendis. Labore quibusdam impedit mollitia, perspiciatis accusantium ducimus cupiditate?
+                    Necessitatibus et, modi labore voluptatibus recusandae odio perspiciatis temporibus corrupti ratione alias repellat? Vel, molestiae quam quaerat dolorum quod placeat alias maiores ea quos illo sapiente sit non est architecto.
+                    Sapiente expedita harum aliquid quis molestiae sequi fuga tempora aperiam excepturi itaque! Nemo distinctio non quo, officia facilis expedita aut iure odit, maxime dolore repudiandae reiciendis, est quas sunt sequi.
+                </p>
             </div>
         </section>
         <section class="product-info">

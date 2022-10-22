@@ -50,3 +50,11 @@
         </ul>
     </div>
 </div>
+
+<div class="modal-feedback">
+    <div class="modal-feedback__window">
+        <h3 class="modal-feedback__title">Спасибо за обращение!</h3>
+        <p class="modal-feedback__desc">Мы свяжемся с Вами в ближайшее время.</p>
+        <button type="button" class="modal-feedback__button">Ок</button>
+    </div>
+</div>
